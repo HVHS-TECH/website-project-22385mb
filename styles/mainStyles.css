@@ -1,0 +1,66 @@
+nav {
+    background-color: blue;
+    height: 50px;
+
+    position: static;
+    top: 0px;
+    left: 0px;
+}
+
+main {
+    background-color: palegreen;
+}
+
+footer {
+    background-color: lightblue;
+    min-height: 250px;
+}
+
+.heroGrid {
+    display: grid;
+    grid-template-columns: 120px 120px 120px;
+}
+
+.heroItem {
+    background-color: red;
+    height: 150px;
+
+    font-size: 3rem;
+}
+
+.poutama {
+    /* border: 0.7rem darkred solid; */
+}
+
+.title {
+    grid-column: 1 / span 3;
+}
+
+.subtitle {
+    grid-column: 1 / span 2;
+}
+
+.scrollArrow {
+    grid-row-start: 3;
+}
+
+.main-cta {
+    background-color: blue;
+    height: 150px;
+
+    margin: 10px;
+}
+
+.groups-cta {
+    background-color: blue;
+    height: 350px;
+
+    margin: 10px;
+}
+
+.staff-cta {
+    background-color: blue;
+    height: 350px;
+
+    margin: 10px;
+}
