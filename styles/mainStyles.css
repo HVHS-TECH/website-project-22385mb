@@ -1,35 +1,53 @@
-nav {
-    background-color: blue;
-    height: 50px;
-
-    position: static;
-    top: 0px;
-    left: 0px;
+body {
+    background-color: #DFEBF2;
+    margin: 0px;
 }
 
-main {
-    background-color: palegreen;
+nav {
+    background-color: orange;
+    height: 50px;
+    width: 100%;
+
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
 }
 
 footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
     background-color: lightblue;
     min-height: 250px;
 }
 
 .heroGrid {
     display: grid;
-    grid-template-columns: 120px 120px 120px;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .heroItem {
     background-color: red;
-    height: 150px;
+    min-height: 150px;
 
     font-size: 3rem;
 }
 
 .poutama {
-    /* border: 0.7rem darkred solid; */
+    border: 0.25rem darkred solid;
+}
+
+footer .poutama {
+    background-color: red;
+    height: 80px; 
+}
+
+footer .poutama.middle {
+    grid-row-start: 2;
+}
+
+footer .poutama.bottom {
+    grid-row-start: 3;
 }
 
 .title {
@@ -46,9 +64,9 @@ footer {
 
 .main-cta {
     background-color: blue;
-    height: 150px;
+    min-height: 150px;
 
-    margin: 10px;
+    margin: 15% 2%;
 }
 
 .groups-cta {
@@ -58,9 +76,57 @@ footer {
     margin: 10px;
 }
 
+.groupsImg {
+    display: flex;
+}
+
+.groupsImg > *{
+    background-color: greenyellow;
+    width: 150px;
+    height: 150px;
+    border: 5px green solid;
+}
+
+.groupsImg > .mid {
+    position: relative;
+    z-index: 2;
+    margin: 2% auto;
+    
+}
+
+.groupsImg > .behind {
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+
+.groupText {
+    background-color: greenyellow;
+    width: 320px;
+    height: 90px;
+
+    margin: auto;
+}
+
+.groupButton {
+    background-color: greenyellow;
+    width: 180px;
+    height: 40px;
+
+    margin: 10% auto;
+}
+
 .staff-cta {
     background-color: blue;
-    height: 350px;
+    padding-bottom: 3%;
 
     margin: 10px;
+}
+
+.staffHero {
+    background-color: lightgreen;
+    width: 100%;
+    height: 200px;
+
+    margin-bottom: 5%;
 }
