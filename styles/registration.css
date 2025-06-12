@@ -1,0 +1,68 @@
+.header {
+    background-color: red;
+    height: 200px;
+}
+
+.diagonalPoutama {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: blue;
+}
+
+.diagonalPoutama .poutama {
+    background-color: gold;
+    height: 140px;
+}
+
+.diagonalPoutama .middle {
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+.diagonalPoutama .bottom {
+    grid-row-start: 3;
+    grid-column-start: 3;
+}
+
+.diagonalPoutama .text {
+    background-color: yellow;
+}
+
+.diagonalPoutama .text.top {
+    grid-column: 2 / span 2;
+    
+}
+
+.diagonalPoutama .text.bottom {
+    grid-row-start: 3;
+    grid-column: 1 / span 2;
+}
+
+.body-text {
+    background-color: blue;
+    margin: 10% 7%;
+    height: 170px;
+
+    text-align: center;
+}
+.instruments {
+    background-color: blue;
+    text-align: center;
+
+    padding-bottom: 5%;
+}
+
+.instrument.slideshow {
+    background-color: gold;
+    height: 300px;
+    width: 235px;
+
+    margin: 10% auto;
+}
+
+.end-cta {
+    background-color: green;
+    height: 75px;
+    width: 300px;
+
+    margin: 5% auto;
+}

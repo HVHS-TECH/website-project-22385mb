@@ -4,7 +4,7 @@ body {
 }
 
 nav {
-    background-color: orange;
+    background-color: #5FD9D9;
     height: 50px;
     width: 100%;
 
@@ -12,6 +12,32 @@ nav {
     top: 0px;
     left: 0px;
     z-index: 100;
+}
+
+.dropdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.dropdown .poutama {
+    height: 150px;
+}
+
+.dropdown .poutama.right {
+    grid-column-start: 3;
+}
+
+.dropdown .poutama.middle {
+    grid-row-start: 2;
+}
+
+.dropdown .poutama.bottom {
+    grid-row-start: 3;
+}
+
+.logo img{
+    margin: 0.3rem 0.5rem;
+    height: 40px;
 }
 
 footer {
