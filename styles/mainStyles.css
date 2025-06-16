@@ -1,10 +1,21 @@
+/***** Google Fonts Import *****/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Monoton&display=swap');
+
+:root {
+    --color-background: #DFEBF2;
+    --color-main-turq: #5FD9D9;
+    --color-dark-green: #025C5C;
+    --color-accent-gold: #D9C162;
+    --color-black: black;
+}
+
 body {
-    background-color: #DFEBF2;
+    background-color: var(--color-background);
     margin: 0px;
 }
 
 nav {
-    background-color: #5FD9D9;
+    background-color: var(--color-main-turq);
     height: 50px;
     width: 100%;
 
@@ -40,7 +51,7 @@ nav {
     top: 7.5%;
     z-index: 101;
     left: 0px;
-    background-color: #5FD9D9;
+    background-color: var(--color-main-turq);
 }
 
 .dropdown .poutama {
@@ -71,7 +82,7 @@ nav {
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 2fr;
-    background-color: lightblue;
+    background-color: var(--color-main-turq);
     min-height: 250px;
 }
 
@@ -81,14 +92,14 @@ footer {
 }
 
 .heroItem {
-    background-color: red;
     min-height: 150px;
 
     font-size: 3rem;
 }
 
 .poutama {
-    border: 0.25rem darkred solid;
+    background-color: var(--color-main-turq);
+    border: 0.25rem var(--color-dark-green) solid;
 }
 
 footer .poutama {
@@ -104,8 +115,9 @@ footer .poutama.bottom {
     grid-row-start: 3;
 }
 
-.title {
+.heroGrid .title {
     grid-column: 1 / span 3;
+    font-family: monoton;
 }
 
 .subtitle {
