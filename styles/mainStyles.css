@@ -7,11 +7,25 @@
     --color-dark-green: #025C5C;
     --color-accent-gold: #D9C162;
     --color-black: black;
+    --color-white: white;
 }
 
 body {
     background-color: var(--color-background);
     margin: 0px;
+
+    font-family: Lato;
+}
+
+button {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    border: none;
+
+    padding: 0.7rem 15%;
+
+    font-family: Lato;
+    font-size: 1rem;
 }
 
 nav {
@@ -117,28 +131,63 @@ footer .poutama.bottom {
 
 .heroGrid .title {
     grid-column: 1 / span 3;
-    font-family: monoton;
+    margin: 0px;
+    text-align: center;
+    font-family: Monoton;
+    font-weight: normal;
+    font-size: 6.2rem;
 }
 
 .subtitle {
     grid-column: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitle > h2 {
+    justify-self: flex-start;
+    margin: 0px;
+    padding-bottom: 10%;
+    text-align: center;
+    font-weight: normal;
+    font-size: 3rem;
+}
+
+.subtitle > button {
+    justify-self: center;
 }
 
 .scrollArrow {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     grid-row-start: 3;
+    margin: auto;
+}
+
+.scrollArrow > img {
+    height: 5rem;
+}
+
+.scrollArrow > p {
+    font-size: 1.2rem;
+    margin: 0.5rem;
 }
 
 .main-cta {
-    background-color: blue;
     min-height: 150px;
 
     margin: 15% 2%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.main-cta span{
+    font-weight: bold;
 }
 
 .groups-cta {
-    background-color: blue;
-    height: 350px;
-
     margin: 10px;
 }
 
@@ -148,9 +197,9 @@ footer .poutama.bottom {
 
 .groupsImg > *{
     background-color: greenyellow;
-    width: 150px;
-    height: 150px;
-    border: 5px green solid;
+    width: 125px;
+    height: 125px;
+    border: 5px black solid;
 }
 
 .groupsImg > .mid {
@@ -162,28 +211,20 @@ footer .poutama.bottom {
 
 .groupsImg > .behind {
     position: relative;
-    width: 120px;
-    height: 120px;
 }
 
 .groupText {
-    background-color: greenyellow;
-    width: 320px;
-    height: 90px;
+    font-size: 1.1rem;
+    text-align: center;
 
     margin: auto;
-}
+    padding: 0px 1rem;
 
-.groupButton {
-    background-color: greenyellow;
-    width: 180px;
-    height: 40px;
-
-    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .staff-cta {
-    background-color: blue;
     padding-bottom: 3%;
 
     margin: 10px;
