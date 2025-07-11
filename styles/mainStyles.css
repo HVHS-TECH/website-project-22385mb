@@ -155,14 +155,68 @@ footer .poutama {
     height: 80px; 
 }
 
+footer .site-map {
+    position: absolute;
+    left: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+footer .site-map > h4 {
+    margin: 0.5rem 0.2rem;
+}
+
+footer .site-map > a {
+    color: white;
+    margin-bottom: 0.2rem;
+}
+
 footer .logo {
-    grid-column: 3 / 5;
-    padding: 5%;
+    grid-column: 4 / -1;
+    padding: 1rem;
 }
 
 footer .logo svg {
     width: 100%;
     max-height: 50px;
+}
+
+footer .contact-info {
+    grid-column: 3 / -1;
+}
+
+footer .contact-info > h5 {
+    margin: 0.5em 0px;
+    text-decoration: underline;
+    font-weight: normal;
+    text-align: center;
+}
+
+footer .contact-info > p {
+    margin: 0.1em 0.5em;
+    font-size: 0.8rem;
+}
+
+footer .foot-bottom {
+    grid-column: 2 / -1;
+    grid-row-start: 3;
+}
+
+footer .external-links {
+    display: flex; 
+    justify-content: space-evenly;
+    padding: 0.5rem;
+}
+
+footer .external-links * {
+    margin: 0px;
+    scale: 0.8;
+}
+
+footer .copyright-notice {
+    font-size: 0.5rem;
 }
 
 .title {
