@@ -1,16 +1,30 @@
 .header {
     background-color: red;
-    height: 200px;
+    padding: 3.5em 0;
+    text-align: center;
 }
+
+.header .title {
+    font-family: Monoton;
+    font-weight: normal;
+    font-size: 3.5rem;
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    margin: -1rem auto;
+}
+
+
 
 .diagonalPoutama {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: blue;
 }
 
 .diagonalPoutama .poutama {
-    background-color: gold;
+    background-color: blue;
+    border: 0.8rem var(--color-accent-gold) solid;
     height: 140px;
 }
 
@@ -24,7 +38,9 @@
 }
 
 .diagonalPoutama .text {
-    background-color: yellow;
+    font-size: 1.3rem;
+    text-align: center;
+    margin: auto;
 }
 
 .diagonalPoutama .text.top {
@@ -38,25 +54,30 @@
 }
 
 .body-text {
-    background-color: blue;
     margin: 10% 7%;
-    height: 170px;
-
     text-align: center;
 }
 .instruments {
-    background-color: blue;
     text-align: center;
 
     padding-bottom: 5%;
 }
 
-.instrument.slideshow {
-    background-color: gold;
-    height: 300px;
-    width: 235px;
+.instrument-slideshow {
+    display: flex;
+    justify-content: center;
+}
 
-    margin: 10% auto;
+.card {
+    border: 0.125rem var(--color-accent-gold) solid;
+    width: 50%;
+}
+
+.instrument-name {
+    background-color: var(--color-accent-gold);
+    font-size: 1.2rem;
+    padding: 0.5em;
+    margin: 0;
 }
 
 .end-cta {
