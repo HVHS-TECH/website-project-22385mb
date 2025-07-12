@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" type="text/css" href="../styles/mainStyles.css">
     <link rel="stylesheet" type="text/css" href="../styles/registration.css">
+
+    <script defer src="../scripts/rego-info-handler.js"></script>
 </head>
 <body>
     <nav>
@@ -39,10 +41,22 @@
         <div class="instruments">
             <h3>Instruments</h3>
             <div class="instrument-slideshow">
-                <div class="card">
-                    <img src="" />
-                    <h4 class="instrument-name">Saxophone</h4>
+                <img id="chevron-left" class="chevron" src="../assets/graphics/icons/chevron-left-rounded.svg" />
+                <div class="cards-container">
+                    <div class="card" data-card-num="1">
+                        <img src="" />
+                        <h4 class="instrument-name">Violin</h4>
+                    </div>
+                    <div class="card current" data-card-num="2">
+                        <img src="" />
+                        <h4 class="instrument-name">Saxophone</h4>
+                    </div>
+                    <div class="card" data-card-num="3">
+                        <img src="" />
+                        <h4 class="instrument-name">Guitar</h4>
+                    </div>
                 </div>
+                <img id="chevron-right" class="chevron" src="../assets/graphics/icons/chevron-right-rounded.svg" />
             </div>
             <div class="end-cta"></div>
         </div>

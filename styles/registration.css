@@ -68,9 +68,25 @@
     justify-content: center;
 }
 
-.card {
-    border: 0.125rem var(--color-accent-gold) solid;
+.chevron {
+    scale: 2;
+    margin: 0 1em;
+}
+
+.cards-container {
+    display: flex;
     width: 50%;
+    border: 0.125rem var(--color-accent-gold) solid;
+    overflow-x: hidden;
+}
+
+.card {
+    width: 100%;
+}
+
+.card:not(.current) {
+    display: none;
+    background-color: red;
 }
 
 .instrument-name {
