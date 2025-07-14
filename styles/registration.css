@@ -23,7 +23,6 @@
 }
 
 .diagonalPoutama .poutama {
-    background-color: blue;
     border: 0.8rem var(--color-accent-gold) solid;
     height: 140px;
 }
@@ -76,7 +75,7 @@
 .cards-container {
     display: flex;
     width: 50%;
-    border: 0.125rem var(--color-accent-gold) solid;
+    max-width: 300px;
     overflow-x: hidden;
 }
 
@@ -84,9 +83,14 @@
     width: 100%;
 }
 
+.card img {
+    border: 0.25rem var(--color-accent-gold) solid;
+    object-fit: cover;
+    width: 95%;
+}
+
 .card:not(.current) {
     display: none;
-    background-color: red;
 }
 
 .instrument-name {
@@ -96,8 +100,13 @@
     margin: 0;
 }
 
+a {
+    color: var(--color-dark-green);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
 .end-cta {
-    background-color: green;
     height: 75px;
     width: 300px;
 
