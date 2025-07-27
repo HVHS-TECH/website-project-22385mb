@@ -17,25 +17,25 @@
 body {
     background-color: var(--color-background);
     margin: 0px;
+
+    /* font-size: 1.2rem; */
 }
 
 button {
     background-color: var(--color-dark-green);
     color: var(--color-white);
     border: none;
-    padding: 1em 1em;
+    padding: 1em 2em;
 }
 
 nav {
     background-color: var(--color-main-turq);
-    width: 100%;
 
     position: sticky;
     top: 0px;
     z-index: 100;
 
     display: flex;
-    align-items: center;
     justify-content: space-between;
 }
 
@@ -44,8 +44,7 @@ nav {
     height: 2rem;
     width: 2rem;
 
-    justify-self: flex-end;
-    margin: 0.7rem;
+    margin: 0.7em;
 }
 
 .hidden {
@@ -55,11 +54,12 @@ nav {
 .dropdown {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* width: 100%; */
 
     position: fixed;
     top: 7.5%;
+    right: 0;
     z-index: 101;
+    
     background-color: var(--color-main-turq);
 }
 
@@ -97,7 +97,7 @@ nav {
     text-align: center;
     margin: -1px;
     font-size: 0.8rem;
-    padding: 0.2rem;
+    padding: 0.2em;
 }
 
 .poutama.top {
@@ -138,11 +138,11 @@ footer {
 .heroGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    /* height: 100vh; */
 }
 
 .heroItem {
-    min-height: 150px;
-    font-size: 3rem;
+    height: 25vh;
 }
 
 .poutama {
@@ -223,6 +223,8 @@ footer .copyright-notice {
     grid-column: 1 / span 3;
     margin: 0px;
     text-align: center;
+    line-height: 100%;
+
     font-family: Monoton;
     font-weight: normal;
     font-size: 6.2rem;
@@ -230,15 +232,17 @@ footer .copyright-notice {
 
 .subtitle {
     grid-column: 1 / span 2;
+    grid-row-start: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
+    line-height: 100%;
 }
 
 .subtitle > h2 {
     justify-self: flex-start;
     margin: 0px;
-    padding-bottom: 10%;
+    padding-bottom: 0.8em;
     text-align: center;
     font-weight: normal;
     font-size: 3rem;
@@ -246,6 +250,7 @@ footer .copyright-notice {
 
 .subtitle > button {
     justify-self: center;
+    margin-bottom: 1em;
 }
 
 .scrollArrow {
@@ -332,4 +337,26 @@ footer .copyright-notice {
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+/*****************************************/
+/*** MEDIA QUERIES ***/
+/****************************************/
+@media (min-width: 767px) {
+    .heroGrid {
+        grid-template-columns: 3fr 2fr 2fr 2fr;
+    }
+
+    .title {
+        font-size: 8rem;
+        letter-spacing: 3vw;
+    }
+
+    .subtitle > h2 {
+        font-size: 5rem;
+    }
+
+    button {
+        padding: 1em 10em;
+    }
 }
