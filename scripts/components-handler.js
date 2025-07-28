@@ -37,6 +37,40 @@ navBarTemplate.innerHTML = `
     </nav>
 `;
 
+const dropDownTemplate = document.createElement('template');
+dropDownTemplate.innerHTML = `
+    <style>
+        @import url(../styles/component-styles.css)
+    </style>
+
+    <div class="dropdown hidden">
+            <h1 class="title">Music <span class="titleSpan">@ HVHS</span></h1>
+            <a class="poutama top right" href="../index.html">
+                <img src="../assets/photos/testImg.JPG" alt="an image of musicians playing">
+                <p>Home</p>
+            </a>
+            <a class="poutama middle centre" href="../html/registration-info.html">
+                <img src="../assets/photos/testImg.JPG" alt="an image of musicians playing">
+                <p>Registration</p>
+            </a>
+            <a class="poutama middle right">
+                <img src="../assets/photos/testImg.JPG" alt="an image of musicians playing">
+                <p>Notices</p>
+            </a>
+            <a class="poutama bottom left" href="../html/about.html">
+                <img src="../assets/photos/testImg.JPG" alt="an image of musicians playing">
+                <p>About Us</p>
+            </a>
+            <a class="poutama bottom centre" href="../html/the-staff.html">
+                <img src="../assets/photos/testImg.JPG" alt="an image of musicians playing">
+                <p>Our Staff</p>
+            </a>
+            <a class="poutama bottom right" href="../html/music-groups.html">
+                <img src="../assets/photos/testImg.JPG" alt="an image of musicians playing">
+                <p>Musical Groups</p>
+            </a>
+        </div>
+`;
 
 class NavBar extends HTMLElement {
     constructor() {
@@ -49,4 +83,16 @@ class NavBar extends HTMLElement {
     }
 }
 
+class DropDown extends HTMLElement {
+    constructor() {
+        super();
+
+        const shadowRoot = this.attachShadow({ mode: 'open'});
+        let clone = dropDownTemplate.content.cloneNode(true);
+
+        shadowRoot.append(clone);
+    }
+}
+
 customElements.define('nav-bar', NavBar);
+customElements.define('drop-down-menu', DropDown);
