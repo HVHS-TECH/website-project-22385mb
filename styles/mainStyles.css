@@ -26,7 +26,7 @@ button {
     padding: 1em 1em;
 }
 
-nav {
+/* nav {
     background-color: var(--color-main-turq);
     width: 100%;
 
@@ -37,16 +37,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-.hamburger {
-    background-color: blue;
-    height: 2rem;
-    width: 2rem;
-
-    justify-self: flex-end;
-    margin: 0.7rem;
-}
+} */
 
 .hidden {
     display: none !important;
@@ -121,11 +112,6 @@ nav {
 
 .poutama.centre {
     grid-column-start: 2;
-}
-
-.logo img{
-    margin: 0.3rem 0.5rem;
-    height: 40px;
 }
 
 footer {
