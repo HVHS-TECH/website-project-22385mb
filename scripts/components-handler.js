@@ -1,3 +1,7 @@
+/***********************************/
+// TEMPLATES
+/***********************************/
+// Nav Bar Template
 const navBarTemplate = document.createElement('template');
 navBarTemplate.innerHTML = `
     <style>
@@ -37,6 +41,7 @@ navBarTemplate.innerHTML = `
     </nav>
 `;
 
+// Drop Down Menu Template
 const dropDownTemplate = document.createElement('template');
 dropDownTemplate.innerHTML = `
     <style>
@@ -72,6 +77,17 @@ dropDownTemplate.innerHTML = `
         </div>
 `;
 
+// Footer Template
+const footerTemplate = document.createElement('template');
+footerTemplate.innerHTML = `
+
+
+`;
+
+
+/***********************************/
+// CLASSES for extending elements
+/***********************************/
 class NavBar extends HTMLElement {
     constructor() {
         super();
@@ -94,5 +110,8 @@ class DropDown extends HTMLElement {
     }
 }
 
+/***********************************/
+// DEFINE ELEMENTS
+/***********************************/
 customElements.define('nav-bar', NavBar);
 customElements.define('drop-down-menu', DropDown);
