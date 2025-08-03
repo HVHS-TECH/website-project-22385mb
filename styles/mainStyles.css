@@ -14,10 +14,13 @@
     font-family: Lato;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     background-color: var(--color-background);
     margin: 0px;
-    overflow-x: hidden;
 
     font-size: 0.9rem;
 }
@@ -27,6 +30,7 @@ button {
     color: var(--color-white);
     border: none;
     padding: 1em 2em;
+    cursor: pointer;
 }
 
 nav {
@@ -255,6 +259,7 @@ footer .copyright-notice {
     gap: 1rem;
     grid-row-start: 3;
     margin: auto;
+    cursor: pointer;
 }
 
 .scrollArrow > img {
@@ -339,6 +344,11 @@ footer .copyright-notice {
 
 .container {
     width: 80%;
+    margin: 0 auto;
+}
+
+.container-half {
+    width: 50%;
     margin: 0 auto;
 }
 
