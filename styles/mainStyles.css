@@ -33,6 +33,11 @@ button {
     cursor: pointer;
 }
 
+a, a:visited {
+    text-decoration: none;
+    color: white;
+}
+
 nav {
     background-color: var(--color-main-turq);
 
