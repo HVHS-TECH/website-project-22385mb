@@ -19,7 +19,7 @@ body {
     margin: 0px;
     overflow-x: hidden;
 
-    /* font-size: 1.2rem; */
+    font-size: 0.9rem;
 }
 
 button {
@@ -262,13 +262,11 @@ footer .copyright-notice {
 }
 
 .scrollArrow > p {
-    font-size: 1.2rem;
     margin: 0.5rem;
 }
 
 .main-cta {
     margin: 3em;
-    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -316,7 +314,6 @@ footer .copyright-notice {
 }
 
 .groupText {
-    font-size: 1.1rem;
     text-align: center;
     width: 60%;
 
@@ -377,6 +374,10 @@ footer .copyright-notice {
         display: block;
     }
 
+    body {
+        font-size: 1.3rem;
+    }
+
     .heroGrid {
         grid-template-columns: 3fr 2fr 2fr 2fr;
     }
@@ -388,6 +389,7 @@ footer .copyright-notice {
 
     .subtitle > h2 {
         font-size: 5rem;
+        margin-bottom: -0.1em;
     }
 
     .sections {
