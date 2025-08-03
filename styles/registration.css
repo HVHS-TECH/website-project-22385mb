@@ -1,6 +1,6 @@
 .header {
     background-color: red;
-    padding: 2em 0 5em 0;
+    padding: 5em 0 7em 0;
     text-align: center;
 }
 
@@ -12,7 +12,6 @@
 
 .header h2 {
     font-size: 1.5rem;
-    margin: -1rem auto;
 }
 
 
@@ -26,6 +25,7 @@
 .diagonalPoutama {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    margin: 3em 0;
 }
 
 .diagonalPoutama .poutama {
@@ -68,7 +68,7 @@
 
 .instruments {
     text-align: center;
-    padding-bottom: 0.2em;
+    padding-bottom: 1em;
 }
 
 .instrument-slideshow {
@@ -119,4 +119,18 @@ a {
     height: 75px;
     width: 300px;
     margin: 1em auto;
+}
+
+@media (min-width: 767px) {
+    .diagonalPoutama .poutama {
+        height: 250px;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .header .title {
+        font-size: 5rem;
+    }
 }
