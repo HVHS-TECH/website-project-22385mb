@@ -9,7 +9,7 @@ document.querySelector(".hamburger").addEventListener("click", () => {
 
 document.querySelector(".scrollArrow").addEventListener("click", () => {
     window.scroll({
-        top: 500,
+        top: 550,
         left: 0,
         behavior: "smooth",
     })

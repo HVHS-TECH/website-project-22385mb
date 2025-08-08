@@ -50,6 +50,7 @@ nav {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .hamburger {
@@ -310,6 +311,7 @@ footer .copyright-notice {
     flex-direction: column;
     gap: 1rem;
     grid-row-start: 3;
+    justify-content: center;
     margin: auto;
     cursor: pointer;
 }
@@ -372,7 +374,7 @@ footer .copyright-notice {
 
 .groupText {
     text-align: center;
-    width: 60%;
+    width: 80%;
 
     margin: 2em auto;
     padding: 0px 1rem;
@@ -440,21 +442,25 @@ footer .copyright-notice {
         font-size: 1.5rem;
     }
 
+    button {
+        font-size: 1rem;
+    }
+
     .heroGrid {
         grid-template-columns: 3fr 2fr 2fr 2fr;
     }
 
     .heroItem {
-        height: 30vh;
+        height: 29.5vh;
     }
 
     .title {
-        font-size: 8rem;
+        font-size: 10rem;
         letter-spacing: 3vw;
     }
 
     .subtitle > h2 {
-        font-size: 5rem;
+        font-size: 6rem;
         margin-bottom: -0.1em;
     }
 
@@ -464,7 +470,11 @@ footer .copyright-notice {
     }
 
     .main-cta {
-        margin: 15% 0 5% 0;
+        margin: 10% 0 7% 0;
+    }
+
+    .groupText {
+        font-size: 1.2rem;
     }
 
     footer {
