@@ -46,7 +46,7 @@ a, a:visited {
     color: white;
 }
 
-nav {
+/* nav {
     background-color: var(--color-main-turq);
 
     position: sticky;
@@ -130,11 +130,6 @@ nav {
 
 .poutama.centre {
     grid-column-start: 2;
-}
-
-.logo img{
-    margin: 0.3rem 0.5rem;
-    height: 40px;
 }
 
 footer {
