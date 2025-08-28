@@ -1,25 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Monoton&display=swap');
 * {
     font-family: Lato;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+
+button {
+    background-color: var(--color-dark-green);
+    color: var(--color-white);
+    border: none;
+    border-radius: 0.4em;
+
+    padding: 1em 4em;
+    cursor: pointer;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: white;
 }
 
 .hidden {
     display: none !important;
 }
 
-.poutama {
-    background-color: var(--color-main-turq);
-    border: 0.25rem var(--color-dark-green) solid;
-}
-
 .dropdown {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* width: 100%; */
 
     position: fixed;
-    top: 7.5%;
+    top: 8.5%;
+    right: 0;
     z-index: 101;
+    
     background-color: var(--color-main-turq);
 }
 
@@ -28,10 +45,6 @@
     font-size: 4rem;
     display: flex;
     flex-direction: column;
-    margin: 0px;
-    text-align: center;
-    font-family: Monoton;
-    font-weight: normal;
 }
 
 .dropdown .titleSpan {
@@ -41,27 +54,20 @@
 }
 
 .dropdown .poutama {
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     background-color: var(--color-dark-green);
-}
-
-.dropdown .poutama img {
-    width: 100%;
-    height: 85%;
-    object-fit: cover;
+    border: 0.1em var(--color-dark-green) solid;
+    height: 28vh;
 }
 
 .dropdown .poutama p {
     background-color: var(--color-dark-green);
-    color: white;
     text-decoration: underline;
     text-align: center;
-    margin: -1px;
     font-size: 0.8rem;
-    padding: 0.2rem;
+    padding: 0.8em;
+    position: relative;
+    bottom: 5vh;
+    margin: 0;
 }
 
 .poutama.top {
@@ -85,4 +91,51 @@
 
 .poutama.centre {
     grid-column-start: 2;
+}
+
+
+
+.title {
+    grid-column: 1 / span 3;
+    margin: 0px;
+    text-align: center;
+    line-height: 100%;
+
+    font-family: Monoton;
+    font-weight: normal;
+    font-size: 5.5rem;
+}
+
+.subtitle {
+    grid-column: 1 / span 2;
+    grid-row-start: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 100%;
+}
+
+.subtitle > h2 {
+    justify-self: flex-start;
+    margin: 0.2em;
+    padding-bottom: 0.8em;
+    text-align: center;
+    font-weight: normal;
+    font-size: 3rem;
+}
+
+
+
+/*****************************************/
+/*** MEDIA QUERIES ***/
+/****************************************/
+@media (min-width: 767px) {
+    .title {
+        font-size: 10rem;
+        letter-spacing: 3vw;
+    }
+
+    .dropdown .poutama {
+        height: 30vh;
+    }
 }
