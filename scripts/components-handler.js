@@ -44,7 +44,7 @@ dropDownTemplate.innerHTML = `
     </style>
 
     <div class="dropdown hidden">
-            <h1 class="title">Music <span class="titleSpan">@ HVHS</span></h1>
+            <!-- <h1 class="title">Music <span class="titleSpan">@HVHS</span></h1>-->
             <a class="poutama top right" href="../index.html">
                 <picture> <!-- String-Orchestra -->
                     <source media="(min-width: 767px)" srcset="../assets/photos/poutama/string-orchestra_ls.jpg">

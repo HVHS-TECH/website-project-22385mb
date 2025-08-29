@@ -38,19 +38,27 @@ a, a:visited {
     z-index: 101;
     
     background-color: var(--color-main-turq);
+    box-shadow: -0.1em 1em 0.7em var(--color-black);
 }
 
 .dropdown .title {
-    grid-column: 1 / span 2;
-    font-size: 4rem;
+    grid-column: 1 / -1;
+    grid-row: 1 / 4;
+    line-height: 87%;
+    margin-left: -0.6em;
+    font-size: 37rem;
+    color: var(--color-accent-gold);
+    visibility: hidden;
+
+    /* letter-spacing: 0.7em;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 .dropdown .titleSpan {
     font-size: 2.5rem;
-    align-self: flex-start;
-    margin-left: 1rem;
+    /* align-self: flex-start; */
+    /* margin-left: 1rem; */
 }
 
 .dropdown .poutama {
@@ -104,6 +112,7 @@ a, a:visited {
     font-family: Monoton;
     font-weight: normal;
     font-size: 5.5rem;
+
 }
 
 .subtitle {
@@ -130,11 +139,6 @@ a, a:visited {
 /*** MEDIA QUERIES ***/
 /****************************************/
 @media (min-width: 767px) {
-    .title {
-        font-size: 10rem;
-        letter-spacing: 3vw;
-    }
-
     .dropdown .poutama {
         height: 30vh;
     }
