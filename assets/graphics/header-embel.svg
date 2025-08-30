@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <g>
+    <rect x=".5" y=".5" width="99" height="99"/>
+    <path d="M99,1v98H1V1h98M100,0H0v100h100V0h0Z"/>
+  </g>
+  <g>
+    <rect x="100.5" y="100.5" width="99" height="99"/>
+    <path d="M199,101v98h-98v-98h98M200,100h-100v100h100v-100h0Z"/>
+  </g>
+  <g>
+    <rect x="200.5" y="200.5" width="99" height="99"/>
+    <path d="M299,201v98h-98v-98h98M300,200h-100v100h100v-100h0Z"/>
+  </g>
+  <g>
+    <rect x="300.5" y="300.5" width="99" height="99"/>
+    <path d="M399,301v98h-98v-98h98M400,300h-100v100h100v-100h0Z"/>
+  </g>
+  <g>
+    <rect x=".5" y="200.5" width="99" height="99"/>
+    <path d="M99,201v98H1v-98h98M100,200H0v100h100v-100h0Z"/>
+  </g>
+  <g>
+    <rect x="100.5" y="300.5" width="99" height="99"/>
+    <path d="M199,301v98h-98v-98h98M200,300h-100v100h100v-100h0Z"/>
+  </g>
+</svg>

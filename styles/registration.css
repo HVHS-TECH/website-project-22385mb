@@ -1,10 +1,36 @@
 .header {
-    background-color: red;
-    padding: 5em 0 7em 0;
+    position: relative;
+    padding: 5em 0 6em 0;
     text-align: center;
 }
 
+.header::before {
+    z-index: -1;
+    content: "";
+    background-image: url(../assets/photos/headers/guitar-sheetmusic-header.jpg);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header-embel {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+}
+
+.header-embel:nth-child(2 of .header-embel) {
+    transform: scaleX(-1);
+    right: 0;
+}
+
 .header .title {
+    background: linear-gradient(90deg, rgba(217, 193, 98, 0) 7%, rgba(217, 193, 98, 1) 50%, rgba(217, 193, 98, 0) 93%);
+    padding: 0.3em 0;
     font-family: Monoton;
     font-weight: normal;
     font-size: 3.5rem;
@@ -12,6 +38,15 @@
 
 .header h2 {
     font-size: 1.5rem;
+}
+
+.bg-embel.arrow {
+    stroke-width: 2px;
+    width: 100%;
+}
+
+.bg-embel#arrowDown {
+    rotate: 180deg;
 }
 
 
@@ -95,7 +130,6 @@
 .card img {
     border: 0.25rem var(--color-accent-gold) solid;
     object-fit: cover;
-    width: 95%;
 }
 
 .card:not(.current) {
@@ -119,6 +153,7 @@ a {
     height: 75px;
     width: 300px;
     margin: 1em auto;
+    text-align: center;
 }
 
 @media (min-width: 767px) {
@@ -132,5 +167,9 @@ a {
 
     .header .title {
         font-size: 5rem;
+    }
+
+    .bg-embel.arrow {
+        height: 40%;
     }
 }
