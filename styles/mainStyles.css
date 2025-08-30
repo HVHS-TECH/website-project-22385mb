@@ -46,21 +46,22 @@ a, a:visited {
     color: white;
 }
 
-nav {
-    background-color: var(--color-main-turq);
+.bg-embel {
+    position: absolute;
+    z-index: -1; 
 
-    position: sticky;
-    top: 0px;
-    z-index: 100;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    overflow: visible;
+    stroke: var(--color-accent-gold);
+    stroke-width: 4px;
+    fill: none;
 }
 
-.hamburger {
-    width: 3rem;
-    margin: 0.1em 0.7em;
+.bg-embel#main-peaks {
+    top: 123%;
+}
+
+.bg-embel#main-waves {
+    top: 175%;
 }
 
 .hidden {
@@ -394,10 +395,6 @@ footer .copyright-notice {
     height: 100%;
 }
 
-svg {
-    border: 1px black solid;
-}
-
 .staffHero svg.note {
     position: relative;
     left: 15%;
@@ -457,6 +454,19 @@ svg {
 @media (min-width: 767px) {
     .desktop-only {
         display: block;
+    }
+
+    .bg-embel {
+        stroke-width: 2px;
+        opacity: 0.6;
+    }
+
+    .bg-embel#main-peaks {
+        top: 100%;
+    }
+
+    .bg-embel#main-waves {
+        display: none;
     }
 
     body {
