@@ -137,7 +137,6 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: var(--color-main-turq);
-    min-height: 250px;
 }
 
 .heroGrid {
@@ -151,22 +150,17 @@ footer {
 }
 
 .poutama {
-    background-color: var(--color-main-turq);
+    background-color: var(--color-dark-green);
     border: 0.25rem var(--color-dark-green) solid;
 
     object-fit: cover;
     width: 100%;
 }
 
-footer .poutama {
-    background-color: var(--color-dark-green);
-    height: 80px;
-}
-
 footer .logo {
     grid-column: 1 / span 3;
     grid-row: 1;
-    padding: 1rem;
+    padding: 1em 1em 2.5em 1em;
 
     filter: invert(1);
 }

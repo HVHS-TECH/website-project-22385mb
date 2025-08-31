@@ -1,3 +1,6 @@
+//creating an interval for an automatic slideshow change
+var slideInterval = setInterval(changeCard, 5000, "right", true);
+
 const chevrons = document.querySelectorAll(".chevron");
 const totalCardsNum = Number(document.querySelector(".cards-container").childElementCount);
 
@@ -8,13 +11,20 @@ chevrons.forEach((chevron) => {
     })
 })
 
+
 /**********************************/
 // changeCard(_direction)
 // Change the current card to the next one in the slideshow
 // INPUT
 //      _direction - specify either "left" or "right" to direct which way the slideshow moves 
 /**********************************/
-function changeCard(_direction) {
+function changeCard(_direction, _automatic) {
+    // If the user clicks through the cards the automatic change timer is reset
+    if(_automatic != true) {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(changeCard, 5000, "right", true);
+    }
+
     const currentCard = document.querySelector(".card.current");
     const currentCardNum = Number(currentCard.getAttribute("data-card-num"));
     var nextCardNum;
