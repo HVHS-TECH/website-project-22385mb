@@ -280,6 +280,7 @@ footer .copyright-notice {
     font-family: Monoton;
     font-weight: normal;
     font-size: 5.5rem;
+    text-transform: uppercase;
 }
 
 .subtitle {
@@ -470,7 +471,7 @@ footer .copyright-notice {
     }
 
     body {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     button {
@@ -496,7 +497,8 @@ footer .copyright-notice {
     }
 
     .sections {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
     }
 

@@ -52,8 +52,8 @@
 
 .main-cta {
     width: 80%;
-    max-width: 370px;
-    margin: 0 auto;
+    max-width: 500px;
+    margin: 3em auto;
 }
 
 
@@ -95,13 +95,16 @@
 
 .body-text {
     width: 80%;
+    height: 100%;
     max-width: 600px;
     margin: 3em auto;
-    text-align: center;
-    font-size: 1.2rem;
+    font-size: 90%;
 }
 
 .instruments {
+    position: sticky;
+    top: 47px;
+    align-self: start;
     text-align: center;
     padding-bottom: 1em;
 }
@@ -112,13 +115,14 @@
 }
 
 .chevron {
+    cursor: pointer;
     scale: 2;
     margin: 0 1em;
 }
 
 .cards-container {
     display: flex;
-    width: 50%;
+    width: 80%;
     max-width: 300px;
     overflow-x: hidden;
 }
@@ -150,8 +154,6 @@ a {
 }
 
 .end-cta {
-    height: 75px;
-    width: 300px;
     margin: 1em auto;
     text-align: center;
 }
@@ -161,15 +163,16 @@ a {
         height: 250px;
     }
 
-    p {
-        font-size: 1.2rem;
-    }
-
     .header .title {
         font-size: 5rem;
     }
 
     .bg-embel.arrow {
         height: 40%;
+    }
+
+    .body-text > .group {
+        align-content: center;
+        height: 525px;
     }
 }
