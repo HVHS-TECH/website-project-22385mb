@@ -9,7 +9,7 @@ img {
 }
 
 
-button {
+.btn {
     background-color: var(--color-dark-green);
     color: var(--color-white);
     border: none;

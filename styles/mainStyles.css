@@ -31,13 +31,13 @@ body {
     font-size: 1.2rem;
 }
 
-button {
+.btn {
     background-color: var(--color-dark-green);
     color: var(--color-white);
     border: none;
     border-radius: 0.4em;
 
-    padding: 1em 4em;
+    padding: 1em 3em;
     cursor: pointer;
 }
 
@@ -142,7 +142,6 @@ footer {
 .heroGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* height: 100vh; */
 }
 
 .heroItem {
@@ -157,10 +156,16 @@ footer {
     width: 100%;
 }
 
+footer .poutama {
+    height: 100px;
+}
+
 footer .logo {
     grid-column: 1 / span 3;
     grid-row: 1;
-    padding: 1em 1em 2.5em 1em;
+    align-self: center;
+    margin-left: 1em;
+    max-width: 400px;
 
     filter: invert(1);
 }
@@ -168,8 +173,9 @@ footer .logo {
 footer .blurb {
     grid-row: 2;
     grid-column: 1 / span 2;
-    margin-top: -2em;
-    font-size: 0.8rem;
+    padding-bottom: 0.3em;
+    font-size: 0.7em;
+    background-color: var(--color-dark-green);
 
     display: flex;
     flex-direction: column;
@@ -184,32 +190,32 @@ footer .blurb > p {
     color: white;
 }
 
-footer button {
+footer .btn {
     background-color: var(--color-accent-gold);
-    font-size: 0.7rem;
-    padding: 0.4em 4em;
+    color: var(--color-dark-green) !important;
+    font-size: 0.85em;
     margin: 0.5em auto;
     font-weight: bold;
 }
 
-footer button > a{
-    color: var(--color-dark-green) !important;
-}
-
 footer .contact-info {
     grid-column: 2 / -1;
+    margin-left: 10%;
 }
 
 footer .contact-info > h5 {
-    margin: 0.5em 0px;
+    margin: 1em 0;
     text-decoration: underline;
     font-weight: normal;
     text-align: center;
 }
 
+.contact-info img {
+    display: inline;
+}
+
 footer .contact-info > p {
-    margin: 0.1em 0.5em;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 footer .external-links {
@@ -230,12 +236,12 @@ footer .external-links * {
 footer .links {
     display: flex;
     flex-direction: column;
-    grid-row-start: 5;
+    grid-row-start: 4;
+    font-size: 1rem;
 }
 
 footer > p {
     text-decoration: underline;
-    font-size: 1rem;
     margin-left: 1em;
 }
 
@@ -250,7 +256,8 @@ footer .links > a {
 }
 
 footer .links > a::before {
-    content: "> ";
+    content: ">";
+    margin-right: 0.3em;
 }
 
 footer .links > a:hover {
@@ -442,7 +449,7 @@ footer .copyright-notice {
 /****************************************/
 @media (min-width: 600px) {
     body {
-        font-size: 1.25rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -468,7 +475,7 @@ footer .copyright-notice {
         font-size: 1.7rem;
     }
 
-    button {
+    .btn {
         font-size: 1rem;
     }
 
@@ -505,7 +512,7 @@ footer .copyright-notice {
     }
 
     footer {
-        grid-template-columns: 1fr 1fr 1fr 3fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
         min-height: 250px;
     }
 
@@ -524,6 +531,7 @@ footer .copyright-notice {
     }
 
     footer .external-links {
+        grid-column-end: 6;
         display: flex; 
         gap: 15%;
     }
@@ -534,7 +542,9 @@ footer .copyright-notice {
 
     footer .links {
         grid-row-start: 3;
-        margin-top: 3em;
+        margin-top: 1em;
+        padding-left: 3em;
+        font-size: 1.2rem;
     }
 
     footer > p {
