@@ -36,10 +36,6 @@
     font-size: 3.5rem;
 }
 
-.header h2 {
-    font-size: 1.5rem;
-}
-
 .bg-embel.arrow {
     stroke-width: 2px;
     width: 100%;
@@ -49,13 +45,9 @@
     rotate: 180deg;
 }
 
-
 .main-cta {
-    width: 80%;
-    max-width: 500px;
     margin: 3em auto;
 }
-
 
 .diagonalPoutama {
     display: grid;
@@ -65,39 +57,34 @@
 
 .diagonalPoutama .poutama {
     border: 0.8rem var(--color-accent-gold) solid;
-    height: 140px;
+    height: 40vw;
 }
 
 .diagonalPoutama .middle {
-    grid-row-start: 2;
     grid-column-start: 2;
 }
 .diagonalPoutama .bottom {
-    grid-row-start: 3;
     grid-column-start: 3;
 }
 
 .diagonalPoutama .text {
     font-size: 1.3rem;
     text-align: center;
-    margin: auto;
+    margin: auto 1em;
+    grid-column-end: span 2;
 }
 
 .diagonalPoutama .text.top {
-    grid-column: 2 / span 2;
-    
+    grid-column-start: 2;  
 }
 
 .diagonalPoutama .text.bottom {
-    grid-row-start: 3;
-    grid-column: 1 / span 2;
+    grid-column-start: 1;
 }
 
 .body-text {
-    width: 80%;
     height: 100%;
-    max-width: 600px;
-    margin: 3em auto;
+    justify-self: center;
     font-size: 90%;
 }
 

@@ -34,16 +34,17 @@ body {
 .btn {
     background-color: var(--color-dark-green);
     color: var(--color-white);
-    border: none;
+    text-decoration: none;
     border-radius: 0.4em;
+    font-size: 0.65em;
 
     padding: 1em 3em;
     cursor: pointer;
 }
 
-a, a:visited {
-    text-decoration: none;
-    color: white;
+.text-container {
+    width: 90%;
+    max-width: 500px;
 }
 
 .bg-embel {
@@ -183,7 +184,6 @@ footer .blurb {
 }
 
 footer .blurb > p {
-    width: 90%;
     margin: 0.5em auto;
     text-align: center;
 
@@ -280,7 +280,7 @@ footer .copyright-notice {
 
     font-family: Monoton;
     font-weight: normal;
-    font-size: 5.5rem;
+    font-size: 5rem;
     text-transform: uppercase;
 }
 
@@ -294,10 +294,8 @@ footer .copyright-notice {
 }
 
 .subtitle > h2 {
-    justify-self: flex-start;
     margin: 0.2em;
     padding-bottom: 0.8em;
-    text-align: center;
     font-weight: normal;
     font-size: 3rem;
 }
@@ -335,7 +333,6 @@ footer .copyright-notice {
 
 .groupsImg {
     display: flex;
-    justify-content: center;
     margin: 0 auto;
     width: 75%;
 }
@@ -346,17 +343,12 @@ footer .copyright-notice {
     min-width: 100px;
     border: 5px var(--color-black) solid;
 
-    margin: 0 auto;
+    position: relative;
 }
 
 .groupsImg > .mid {
-    position: relative;
     z-index: 2; 
     scale: 1.1;
-}
-
-.groupsImg > .behind {
-    position: relative;
 }
 
 .groupsImg > .behind.left {
@@ -368,17 +360,12 @@ footer .copyright-notice {
 
 .groupText {
     text-align: center;
-    width: 80%;
 
     margin: 2em auto;
     padding: 0px 1rem;
 
     display: flex;
     flex-direction: column;
-}
-
-.staff-cta {
-    margin-top: 3%;
 }
 
 .staffHero {
@@ -453,6 +440,12 @@ footer .copyright-notice {
     }
 }
 
+@media (min-width: 450px) {
+    .title {
+        letter-spacing: 3vw;
+    }
+}
+
 @media (min-width: 767px) {
     .desktop-only {
         display: block;
@@ -489,12 +482,11 @@ footer .copyright-notice {
 
     .title {
         font-size: 10rem;
-        letter-spacing: 3vw;
     }
 
     .subtitle > h2 {
         font-size: 6rem;
-        margin-bottom: -0.1em;
+        margin-bottom: -0.3em;
     }
 
     .sections {
@@ -504,7 +496,7 @@ footer .copyright-notice {
     }
 
     .main-cta {
-        margin: 10% 0 7% 0;
+        margin: 10% 0 13% 0;
     }
 
     .groupText {

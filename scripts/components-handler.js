@@ -108,7 +108,7 @@ footerTemplate.innerHTML = `
         </div>
         <div class="blurb">
             <p>This is a cool blurb telling you all about the HVHS music department and why you should join!</p>
-            <a class="btn" href="html/registration-info.html">Sign Up For Lessons</a>
+            <a class="btn" href="../html/registration-info.html">Sign Up For Lessons</a>
         </div>
         <div class="external-links">
                 <a target="_blank" href="https://www.hvhs.school.nz"><img src="../assets/graphics/footer-icons/akar-icons--globe.svg" alt="Visit the HVHS school website."></a>
