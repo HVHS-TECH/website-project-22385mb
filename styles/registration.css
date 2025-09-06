@@ -216,6 +216,71 @@ a {
     top: 0;
 }
 
+/****************************************/
+/*** STAFF ***/
+/****************************************/
+.staff-interactive {
+    display: grid;
+    grid-template-areas: "overlap";
+    align-items: center;
+}
+
+.staff-interactive > * {
+    grid-area: overlap;
+}
+
+.staff-container {
+    background: url(../assets/graphics/staff-lines.svg) repeat-x;
+    background-size: cover;
+    display: flex;
+    overflow: scroll hidden;
+    gap: 10%;
+    padding: 17vh 10%;
+}
+
+.staff-collection {
+    display: flex;
+}
+
+.staff-note {
+    margin-right: 10em;
+    width: 50vw;
+    rotate: -10deg;
+    display: grid;
+    grid-template-areas: "overlap";
+}
+
+.staff-note > * {
+    grid-area: overlap;
+}
+
+.note-img {
+    clip-path: ellipse(50% 35% at 50% 50%);
+    /* clip-path: path("M 100.6225 9.0375 M 100.6225 9.0375 c -6.9075 0 -14.0175 0.6525 -21.24 2.025 c -45.045 8.55 -76.5675 41.7825 -70.4025 74.205 c 5.175 27.225 35.28 45.2475 71.4825 45.2475 c 6.9075 0 14.0175 -0.6525 21.24 -2.025 c 43.965 -8.3475 77.1075 -38.88 70.4025 -74.205 c -5.175 -27.225 -35.28 -45.2475 -71.4825 -45.2475 h -37.3725 Z"); */
+}
+
+.note-img.border {
+    position: relative;
+    top: 2%;
+    left: 1%;
+    background-color: black;
+    scale: 1.1;
+}
+
+@media (min-width: 450px) {
+    .staff-note {
+        margin-right: 7em;
+        width: 25vw;
+    }
+}
+
+@media (min-width: 767px) {
+    .staff-note {
+        margin-right: 7em;
+        width: 15vw;
+    }
+}
+
 @media (min-width: 767px) {
     .diagonalPoutama .poutama {
         height: 250px;
