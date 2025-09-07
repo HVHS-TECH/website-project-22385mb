@@ -220,13 +220,8 @@ a {
 /*** STAFF ***/
 /****************************************/
 .staff-interactive {
-    display: grid;
-    grid-template-areas: "overlap";
-    align-items: center;
-}
-
-.staff-interactive > * {
-    grid-area: overlap;
+    position: relative;
+    margin-bottom: 7%;
 }
 
 .staff-container {
@@ -267,6 +262,81 @@ a {
     scale: 1.1;
 }
 
+.info-card {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    background-color: var(--color-dark-green);
+    box-shadow: 0 0 1em 0.1em var(--color-black);
+    padding: 1em 0 2.5em 0;
+    width: 85%;
+
+    display: none;
+    grid-template-columns: 1fr;
+
+    align-items: center;
+    justify-items: center;
+
+    color: white;
+    text-align: center;
+}
+
+.info-card-show {
+    display: grid;
+}
+
+.info-card .details {
+    margin-bottom: 1em;
+}
+
+.info-card .details > * {
+    margin: 0;
+}
+
+.details .name {
+    font-weight: 900;
+    font-size: 100%;
+    text-transform: uppercase;
+}
+
+.details .role {
+    font-weight: 700;
+}
+
+.details .contact {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 65%;
+}
+
+.info-card .profilePic {
+    width: 40%;
+    max-width: 135px;
+    border-radius: 100%;
+}
+
+.info-card .bio {
+    grid-column: 1 / -1;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.info-card .exit-card {
+    margin: 0;
+    position: absolute;
+    top: 0.1em;
+    right: 0.2em;
+    font-size: 1.5rem;
+    color: red;
+}
+
+
+
 @media (min-width: 450px) {
     .staff-note {
         margin-right: 7em;
@@ -274,10 +344,38 @@ a {
     }
 }
 
+@media (min-width: 600px) {
+    .info-card {
+        width: 75%;
+    }
+}
+
 @media (min-width: 767px) {
     .staff-note {
         margin-right: 7em;
         width: 15vw;
+    }
+
+    .info-card {
+        width: 45%;
+
+        grid-template-columns: 2fr 1fr;
+        row-gap: 5%;
+    }
+
+    .info-card .details {
+        grid-row: 1;
+    }
+
+    .info-card .profilePic {
+        grid-column-start: 2;
+        justify-self: start;
+        width: 75%;
+        max-width: 75%;
+    }
+
+    .info-card .bio {
+        font-size: 1.2rem;
     }
 }
 
