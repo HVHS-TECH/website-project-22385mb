@@ -222,13 +222,21 @@ a {
 .staff-interactive {
     position: relative;
     margin-bottom: 7%;
+    height: 600vh;
+}
+
+.stave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400vw;
+    height: 100%
 }
 
 .staff-container {
-    background: url(../assets/graphics/staff-lines.svg) repeat-x;
-    background-size: cover;
     display: flex;
-    overflow: scroll hidden;
+    position: sticky;
+    top: 25%;
     gap: 10%;
     padding: 17vh 10%;
 }
@@ -263,8 +271,8 @@ a {
 }
 
 .info-card {
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 25%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;

@@ -21,8 +21,8 @@ img {
     max-inline-size: 100%;
 }
 
-html {
-    overflow-x: hidden;
+html, body {
+    overflow-x: clip;
 }
 
 body {

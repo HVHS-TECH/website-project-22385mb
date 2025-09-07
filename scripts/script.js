@@ -1,3 +1,27 @@
+import { animate, scroll } from "https://cdn.jsdelivr.net/npm/motion@12.23.12/+esm";
+
+scrollingStaff();
+window.addEventListener("resize", scrollingStaff)
+
+function scrollingStaff() {
+    var staffWidth = 0;
+    const staffCollections = document.querySelectorAll(".staff-collection");
+    staffWidth = 0;
+    for(var i = 0; i<staffCollections.length; i++) {
+        staffWidth += staffCollections[i].getBoundingClientRect()["width"];
+    }
+
+    scroll(
+        animate(".staff-container",
+            {transform: ["none", `translateX(-${staffWidth}px)`]}
+        ), 
+        {target: document.querySelector(".staff-interactive")}
+    );
+
+    document.querySelector(".stave").style.width = staffWidth + 500;
+}
+
+
 document.querySelector("nav-bar").shadowRoot.querySelector(".hamburger").addEventListener("click", () => {
     const dropdown = document.querySelector("drop-down-menu").shadowRoot.querySelector(".dropdown");
     if(dropdown.classList.contains("hidden")) {
