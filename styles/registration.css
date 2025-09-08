@@ -219,6 +219,29 @@ a {
 /****************************************/
 /*** STAFF ***/
 /****************************************/
+.staff-menu {
+    position: sticky;
+    top: 9%;
+    z-index: 15;
+    background-color: var(--color-dark-green);
+    color: white;
+    font-size: 1.2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 0 1em;
+}
+.scroll-link:hover {
+    text-decoration: underline;
+}
+
+.staff-menu li:nth-child(even) {
+    background-color: var(--color-dark-green-light);
+}
+.staff-menu li:nth-child(odd) {
+    background-color: var(--color-dark-green);
+}
+
 .staff-interactive {
     position: relative;
     margin-bottom: 7%;
@@ -245,12 +268,21 @@ a {
     display: flex;
 }
 
+.colelction-name {
+    position: absolute;
+    top: -10%;
+    margin: 0;
+
+    text-decoration: underline;
+}
+
 .staff-note {
     margin-right: 10em;
     width: 50vw;
     rotate: -10deg;
     display: grid;
     grid-template-areas: "overlap";
+    cursor: pointer;
 }
 
 .staff-note > * {
@@ -266,8 +298,16 @@ a {
     position: relative;
     top: 2%;
     left: 1%;
-    background-color: black;
+    background-color: var(--color-black);
     scale: 1.1;
+}
+
+.staff-note:hover .note-img.border {
+    background-color: var(--color-dark-green);
+}
+
+.staff-note:hover {
+    scale: 1.2;
 }
 
 .info-card {
