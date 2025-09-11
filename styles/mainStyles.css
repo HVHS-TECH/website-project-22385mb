@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Monoton&display=swap');
 
 :root {
+    /*** COLOUR VARIABLES ***/
     --color-background: #DFEBF2;
     --color-main-turq: #5FD9D9;
     --color-dark-green: #025C5C;
@@ -10,6 +11,10 @@
     --color-black: black;
     --color-white: white;
 }
+
+/************************/
+/*** WHOLE SITE STYLING ***/
+/************************/
 
 * {
     font-family: Lato;

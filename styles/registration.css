@@ -77,7 +77,7 @@
 }
 
 .diagonalPoutama .text {
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-align: center;
     margin: auto 1em;
     grid-column-end: span 2;
@@ -212,6 +212,11 @@ a {
 .group-info .btn {
     border-radius: 100px;
     font-size: 0.9rem;
+}
+
+.group-info .times {
+    font-weight: 700;
+    font-style: italic;
 }
 
 .group-slideshow .card img {
@@ -508,5 +513,9 @@ a {
     }
     .group-info .btn {
         font-size: 1.1rem;
+    }
+
+    .diagonalPoutama .text {
+        font-size: 1.5rem;
     }
 }

@@ -6,6 +6,8 @@
 
     display: grid;
     align-items: center;
+    position: relative;
+    overflow-y: hidden;
 }
 
 .header {
@@ -61,6 +63,16 @@
     font-size: 2rem;
 }
 
+#about-waves {
+    z-index: 1;
+    bottom: 10%;
+}
+
+#about-peaks {
+    z-index: 0;
+    bottom: 20%;
+}
+
 @media (min-width: 767px) {
     .header {
         padding-top: 7em;
@@ -70,6 +82,10 @@
     }
     .header p {
         font-size: 2rem;
+    }
+
+    .end-welcome {
+        font-size: 2.5rem;
     }
 
 }
