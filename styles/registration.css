@@ -159,6 +159,10 @@ a {
     justify-content: center;
 }
 
+.group-slideshow .chevron {
+    filter: invert(1);
+}
+
 .group-slideshow .cards-container {
     width: 50%;
     position: relative;
