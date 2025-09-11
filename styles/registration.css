@@ -7,13 +7,22 @@
 .header::before {
     z-index: -1;
     content: "";
-    background-image: url(../assets/photos/headers/guitar-sheetmusic-header.jpg);
     opacity: 0.5;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#staff-header::before {
+    background-image: url(../assets/photos/headers/mrk-conducting-prizegiving-header.jpg);
+}
+#registration-header::before {
+    background-image: url(../assets/photos/headers/guitar-sheetmusic-header.jpg);
+}
+#groups-header::before {
+    background-image: url(../assets/photos/headers/volante-prizegiving-header.jpg);
 }
 
 .header-embel {
@@ -34,6 +43,7 @@
     font-family: Monoton;
     font-weight: normal;
     font-size: 3.5rem;
+    letter-spacing: 1vw;
 }
 
 .bg-embel.arrow {
@@ -57,7 +67,6 @@
 
 .diagonalPoutama .poutama {
     border: 0.8rem var(--color-accent-gold) solid;
-    height: 40vw;
 }
 
 .diagonalPoutama .middle {
@@ -476,10 +485,6 @@ a {
 }
 
 @media (min-width: 767px) {
-    .diagonalPoutama .poutama {
-        height: 250px;
-    }
-
     .header .title {
         font-size: 5rem;
     }
