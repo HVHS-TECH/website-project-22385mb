@@ -6,58 +6,104 @@
 
     display: grid;
     align-items: center;
-    /* font-size: 1.4rem; */
 }
 
 .header {
-    display: flex;
-    flex-direction: column;
+    display: block;
     background: linear-gradient(180deg, var(--color-background) 25%, var(--color-dark-green) 90%);
     justify-content: end;
-    padding: 3em 0;
+    padding: 13em 1em 3em 1em;
 }
 
 .header h1 {
     font-family: Monoton;
     font-weight: normal;
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: 2.3rem;
+    margin: 0;
+}
+.header p {
+    font-size: 1.5rem;
 }
 
 .full-section.left {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .full-section.centre {
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr;
 }
 .full-section.centre p {
-    grid-column-start: 2;
     text-align: center;
-}
-.full-section.centre .accompany:first-of-type {
-    justify-self: start;
 }
 
 .full-section.right {
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: 1fr;
 }
 .full-section.right p {
-    grid-column-start: 3;
     text-align: right;
 }
-.full-section.right .accompany, .full-section.left .accompany {
-    grid-column-end: span 2;
-}
-.full-section.right .accompany {
-    justify-self: start;
-    grid-row-start: 1;
-    grid-column-start: 1;
+
+.full-section.text-only p {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
 }
 
 .accompany {
-    justify-self: end;
+    justify-self: center;
     width: 90%;
     height: 75%;
     background-color: var(--color-accent-gold);
+}
+
+.end-welcome {
+    font-size: 2rem;
+}
+
+@media (min-width: 767px) {
+    .header {
+        padding-top: 7em;
+    }
+    .header h1 {
+        font-size: 5rem;
+    }
+    .header p {
+        font-size: 2rem;
+    }
+
+}
+@media (min-width: 600px) {
+    .full-section.left {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .full-section.centre {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .full-section.centre p {
+        grid-column-start: 2;
+    }
+    .full-section.centre .accompany:first-of-type {
+        justify-self: start;
+    }
+
+    .full-section.right {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+    .full-section.right p {
+        grid-column-start: 3;
+    }
+    .full-section.right .accompany, .full-section.left .accompany {
+        grid-column-end: span 2;
+    }
+    .full-section.right .accompany {
+        justify-self: start;
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+
+    .accompany {
+        justify-self: end;
+    }
 }

@@ -324,8 +324,8 @@ footer .copyright-notice {
     text-align: center;
 }
 
-.main-cta > * {
-    justify-self: center;
+.main-cta > .text-container {
+    margin: 0 auto;
 }
 
 .main-cta span, .main-cta p + p{
@@ -339,9 +339,8 @@ footer .copyright-notice {
 }
 
 .groupsImg > *{
-    width: 40%;
+    width: 33%;
     max-width: 200px;
-    min-width: 100px;
     border: 5px var(--color-black) solid;
 
     position: relative;
@@ -370,8 +369,8 @@ footer .copyright-notice {
 }
 
 .staffHero {
-    width: 80%;
-    margin: auto;
+    position: relative;
+    width: 100%;
 
     display: grid;
     grid-template-areas: "overlap";
@@ -379,6 +378,62 @@ footer .copyright-notice {
 
 .staffHero > * {
     grid-area: overlap;
+}
+
+.note {
+    width: 20%;
+    height: 20%;
+    /* rotate: -10deg; */
+    display: grid;
+    grid-template-areas: "overlap";
+}
+.note > * {
+    grid-area: overlap;
+}
+
+.note-img {
+    clip-path: ellipse(50% 35% at 50% 50%);
+}
+
+.note-img.border {
+    position: relative;
+    top: 2%;
+    left: 1%;
+    background-color: var(--color-black);
+    scale: 1.1;
+}
+
+.note-line {
+    height: 175%;
+    width: 15px;
+    position: absolute;
+    right: -10%;
+    bottom: 25%;
+    /* rotate: 10deg; */
+    stroke: black;
+    stroke-width: 15;
+}
+
+.note-line.down {
+    left: -15%;
+    top: 30%;
+}
+
+.single {
+    position: absolute;
+    left: 10%;
+    bottom: 15%;
+}
+
+.double {
+    position: absolute;
+    right: 36%;
+    bottom: 40%;
+}
+
+.double + .double {
+    right: 5%;
+    bottom: 75%;
 }
 
 .staffHero .stave {
@@ -431,6 +486,8 @@ footer .copyright-notice {
     right: -5%;
     transform: rotate(-17deg);
 }
+
+
 
 
 /*****************************************/
