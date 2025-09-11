@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 395" width="20" height="395">
+	<title>Stave-LinesVertical</title>
+	<style>
+		.s0 { fill: #ffffff;stroke: #000000;stroke-miterlimit:10;stroke-width: 5 } 
+	</style>
+	<g id="Layer 1">
+		<path id="Shape 1" fill-rule="evenodd" class="s0" d="m15 0v401.72z"/>
+		<path id="Shape 1 copy" fill-rule="evenodd" class="s0" d="m15 0v401.72z"/>
+		<path id="Shape 1 copy 2" fill-rule="evenodd" class="s0" d="m5 0v401.72z"/>
+	</g>
+</svg>
