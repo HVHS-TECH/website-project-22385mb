@@ -152,7 +152,25 @@ a {
 
 .group-slideshow .cards-container {
     width: 50%;
+    position: relative;
+    overflow-x: visible;
 }
+
+.group-slideshow .card.behind {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 75%;
+    bottom: 10%;
+}
+
+.card.behind.left {
+    left: -40%;
+}
+.card.behind.right {
+    right: -40%;
+}
+
 
 .group-info {
     width: 90%;
