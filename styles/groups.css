@@ -1,39 +1,103 @@
-.card.spin-right-out {
-    --spin-dir: -40%;
-    animation: spin-out 3s;
-}
-.card.spin-left-out {
-    --spin-dir: 40%;
-    animation: spin-out 3s;
+:root {
+    --right: 1;
+    --left: -1;
+    --center: 0;
 }
 
-.card.spin-right-in {
-    --spin-dir: -40%;
-    animation: spin-in 3s;
+.cards-container {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    z-index: -1;
+    --card-z-movement: -250px;
+    --card-x-movement: 100%;
+
+    /* animation: spin 20s infinite; */
 }
-.card.spin-left-in {
-    --spin-dir: 40%;
-    animation: spin-in 3s;
+
+.cards {
+    transform: translateZ(-300px);
+}
+
+.card.behind.left {
+    /* animation: spin-hidden-left 5s forwards; */
+    transform: rotateY(-45deg) translateX(calc(var(--card-x-movement) * -1)) translateZ(var(--card-z-movement));
+}
+.card.behind.right {
+    /* animation: spin-center-right 5s forwards; */
+    transform: rotateY(45deg) translateX(var(--card-x-movement)) translateZ(var(--card-z-movement));
+}
+.card {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    /* transform: rotateY(0deg) translateZ(var(--card-z-movement)); */
+}
+
+/*** Right Rotation ***/
+.center-right {
+    --spin-direction: var(--right);
+    animation-name: spin-center;
+}
+.left-center {
+    --spin-direction: var(--center);
+    animation-name: spin-left;
+}
+.hidden-left {
+    --spin-direction: var(--left);
+    animation-name: spin-hidden;
+}
+.right-hidden {
+    --spin-direction: var(--right);
+    animation-name: spin-right;
+}
+/*** Left Spin ***/
+.center-left {
+    --spin-direction: var(--left);
+    animation-name: spin-center;
+}
+.left-hidden {
+    --spin-direction: var(--left);
+    animation-name: spin-left;
+}
+.right-center {
+    --spin-direction: var(--center);
+    animation-name: spin-right;
+}
+.hidden-right {
+    --spin-direction: var(--right);
+    animation-name: spin-hidden;
 }
 
 
-@keyframes spin-out {
+
+@keyframes spin-left {
     from {
-        transform: translateX(var(--spin-dir));
-        width: 100%;
+        transform: translateX(-100%) translateZ(-250px) rotateY(-45deg);
     }
     to {
-        transform: translateX(0);
-        width: 75%;
+        transform: translateX(calc(50% * var(--spin-direction))) translateZ(calc(500px * var(--spin-direction))) rotateY(calc(135deg * var(--spin-direction)));
     }
 }
-@keyframes spin-in {
+@keyframes spin-right {
     from {
-        transform: translateX(var(--spin-dir));
-        width: 75%;
+        transform: translateX(100%) translateZ(-250px) rotateY(45deg);
     }
     to {
-        transform: translateX(0);
-        width: 100%;
+        transform: translateX(calc(50% * var(--spin-direction))) translateZ(calc(-500px * var(--spin-direction))) rotateY(calc(135deg * var(--spin-direction)));
+    }
+}
+@keyframes spin-center {
+    from {
+        transform: translateX(0%) translateZ(0) rotateY(0);
+    }
+    to {
+        transform: translateX(calc(100% * var(--spin-direction))) translateZ(-250px) rotateY(calc(45deg * var(--spin-direction)));
+    }
+}
+@keyframes spin-hidden {
+    from {
+        transform: translateX(calc(50% * var(--spin-direction))) translateZ(-500px) rotateY(calc(135deg * var(--spin-direction)));
+    }
+    to {
+        transform: translateX(calc(100% * var(--spin-direction))) translateZ(-250px) rotateY(calc(45deg * var(--spin-direction)));
     }
 }

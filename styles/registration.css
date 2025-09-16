@@ -172,17 +172,21 @@ a {
 .group-slideshow .card.behind {
     display: block;
     position: absolute;
-    z-index: -1;
-    width: 75%;
-    bottom: 10%;
+    /* z-index: -1; */
+    /* width: 75%; */
+    /* bottom: 10%; */
+}
+.group-slideshow .card:not(.current):not(.behind) {
+    display: block;
+    position: absolute;
 }
 
-.card.behind.left {
-    left: -40%;
+/* .card.behind.left {
+    left: -70%;
 }
 .card.behind.right {
-    right: -40%;
-}
+    right: -70%;
+} */
 
 .info-container {
     position: relative;
