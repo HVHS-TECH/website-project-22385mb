@@ -15,7 +15,7 @@ chevrons.forEach((chevron) => {
 // INPUT
 //      _direction - specify either "left" or "right" to direct which way the slideshow moves 
 /**********************************/
-function changeCard(_direction, _automatic) {
+function changeCard(_direction) {
     //Get the current card and it's number in the order
     const currentCard = document.querySelector(".card.current");
     const currentCardNum = Number(currentCard.getAttribute("data-card-num"));
@@ -33,8 +33,6 @@ function changeCard(_direction, _automatic) {
         hiddenCardNum = checkForSlideEnd(nextCardNum - 1);
         oppDirection = "left";
     }
-    console.log("Next = " + nextCardNum);
-    console.log("hidden = " + hiddenCardNum);
 
     // MOVE ALL THE CARDS BY CHANGING THIER CLASSES
     //Move the card on the "end" by making it invisible

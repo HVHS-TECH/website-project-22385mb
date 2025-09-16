@@ -1,0 +1,39 @@
+.card.spin-right-out {
+    --spin-dir: -40%;
+    animation: spin-out 3s;
+}
+.card.spin-left-out {
+    --spin-dir: 40%;
+    animation: spin-out 3s;
+}
+
+.card.spin-right-in {
+    --spin-dir: -40%;
+    animation: spin-in 3s;
+}
+.card.spin-left-in {
+    --spin-dir: 40%;
+    animation: spin-in 3s;
+}
+
+
+@keyframes spin-out {
+    from {
+        transform: translateX(var(--spin-dir));
+        width: 100%;
+    }
+    to {
+        transform: translateX(0);
+        width: 75%;
+    }
+}
+@keyframes spin-in {
+    from {
+        transform: translateX(var(--spin-dir));
+        width: 75%;
+    }
+    to {
+        transform: translateX(0);
+        width: 100%;
+    }
+}
