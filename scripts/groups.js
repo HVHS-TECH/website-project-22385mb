@@ -49,6 +49,8 @@ function changeCard(_direction, _automatic) {
     nextCard.classList.remove("behind", "left", "right");
     nextCard.classList.add("current");
     hiddenCard.classList.add("behind", oppDirection);
+
+    changeInfoCard(nextCardNum, currentCardNum);
 }
 
 function checkForSlideEnd(_card) {
@@ -59,4 +61,13 @@ function checkForSlideEnd(_card) {
     } else {
         return _card;
     }
+}
+
+function changeInfoCard(_newCardNum, _oldCardNum) {
+    let newInfo = document.querySelector(`.group-info[data-card-num="${_newCardNum}"]`);
+    let oldInfo = document.querySelector(`.group-info[data-card-num="${_oldCardNum}"]`);
+    if(newInfo != null) {
+        newInfo.classList.add("current");
+    }
+    oldInfo.classList.remove("current");
 }
