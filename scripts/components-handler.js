@@ -112,9 +112,9 @@ footerTemplate.innerHTML = `
         </div>
         <div class="external-links">
                 <a target="_blank" href="https://www.hvhs.school.nz"><img src="../assets/graphics/footer-icons/akar-icons--globe.svg" alt="Visit the HVHS school website."></a>
-                <a target="_blank" href=""><img src="../assets/graphics/footer-icons/akar-icons--youtube-fill.svg" alt="Visit the Music Department's youtube channel."></a>
-                <a target="_blank" href=""><img src="../assets/graphics/footer-icons/akar-icons--instagram-fill.svg" alt="Visit the Music Department's instagram page."></a>
-                <a target="_blank" href=""><img src="../assets/graphics/footer-icons/akar-icons--facebook-fill.svg" alt="Visit the Music Department's facebook page."></a>
+                <a target="_blank" href="https://www.youtube.com/@gracewright8894/featured"><img src="../assets/graphics/footer-icons/akar-icons--youtube-fill.svg" alt="Visit the Music Department's youtube channel."></a>
+                <a target="_blank" href="https://www.instagram.com/hvhsofficial/"><img src="../assets/graphics/footer-icons/akar-icons--instagram-fill.svg" alt="Visit the Music Department's instagram page."></a>
+                <a target="_blank" href="https://www.facebook.com/hvhs.school.nz"><img src="../assets/graphics/footer-icons/akar-icons--facebook-fill.svg" alt="Visit the Music Department's facebook page."></a>
         </div>
         <div class="contact-info">
             <h5>Contact Us</h5>
@@ -144,6 +144,29 @@ footerTemplate.innerHTML = `
     </footer>
 `;
 
+const groupInfoTemplate = document.createElement('template');
+groupInfoTemplate.innerHTML = `
+<style>
+    @import url(../styles/registration.css)
+</style>
+    <div class="group-info current" data-card-num="2">
+        <h4 class="group-name"><slot name="name">Group Name</slot></h4>
+        <p class="group-coord">With <slot name="coord" class="bold">Chris Buckland</slot></p>
+        <slot name="blurb">
+            <p>
+                The HVHS Barbershop Quartet is cool.
+            </p>
+        </slot>
+        <p class="times">Jazz Band meets on Wednesdays at 1:30pm in M1</p>
+        <br>
+        <a class="btn">Contact</a>
+        <div class="group-imgs">
+            <img class="group-img" src="../assets/photos/squares/prizegiving-jazz-band.jpg">
+            <img class="group-img" src="../assets/photos/squares/prizegiving-jazz-band.jpg">
+            <img class="group-img" src="../assets/photos/squares/prizegiving-jazz-band.jpg">
+        </div>
+    </div>
+`;
 /***********************************/
 // CLASSES for extending elements
 /***********************************/
@@ -180,9 +203,21 @@ class CustomFooter extends HTMLElement {
     }
 }
 
+class GroupInfo extends HTMLElement {
+    constructor() {
+        super();
+
+        const shadowRoot = this.attachShadow({ mode: 'open'});
+        let clone = groupInfoTemplate.content.cloneNode(true);
+
+        shadowRoot.append(clone);
+    }
+}
+
 /***********************************/
 // DEFINE ELEMENTS
 /***********************************/
 customElements.define('nav-bar', NavBar);
 customElements.define('drop-down-menu', DropDown);
 customElements.define('custom-footer', CustomFooter);
+customElements.define('group-info-card', GroupInfo);
