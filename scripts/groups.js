@@ -1,5 +1,5 @@
 const chevrons = document.querySelectorAll(".chevron");
-const totalCardsNum = Number(document.querySelector(".cards-container").childElementCount);
+const totalCardsNum = Number(document.querySelectorAll(".cards-container > .card").length);
 
 chevrons.forEach((chevron) => {
     chevron.addEventListener("click", (event) => {

@@ -73,6 +73,15 @@
     bottom: 20%;
 }
 
+.bg-lines-path {
+    width: 100vw;
+    position: absolute;
+    z-index: 2;
+}
+.bg-lines-path > * {
+    margin: 0 50%;
+}
+
 @media (min-width: 767px) {
     .header {
         padding-top: 7em;

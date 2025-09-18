@@ -67,6 +67,19 @@
     animation-name: spin-hidden;
 }
 
+.groups-illustrations {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-25%) translateZ(-200px);
+    /* width: 200%; */
+    /* height: 200% */
+}
+
+.groups-illustrations img {
+    /* width: 200%; */
+    height: 500px;
+}
+
 
 
 @keyframes spin-left {
