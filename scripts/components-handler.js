@@ -30,9 +30,9 @@ navBarTemplate.innerHTML = `
     </style>
     <nav>
         <a class="logo" href="../index.html">
-            <img src="../assets/graphics/HVHS-Logo.svg" alt="Hutt Valley High School Logo" />
+            <img src="assets/graphics/HVHS-Logo.svg" alt="Hutt Valley High School Logo" />
         </a>
-        <img class="hamburger" src="../assets/graphics/hamburger-menu.svg" alt="">
+        <img class="hamburger" src="assets/graphics/hamburger-menu.svg" alt="">
     </nav>
 `;
 
