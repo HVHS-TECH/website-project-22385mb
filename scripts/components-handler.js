@@ -1,5 +1,5 @@
 var pathStart = "../"
-if(window.location.pathname.includes('index.html')) {
+if(window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
     pathStart = "./"
 }
 /***********************************/
