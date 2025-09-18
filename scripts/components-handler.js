@@ -47,15 +47,15 @@ dropDownTemplate.innerHTML = `
             <!-- <h1 class="title">Music <span class="titleSpan">@HVHS</span></h1>-->
             <a class="poutama top right" href="../index.html">
                 <picture> <!-- String-Orchestra -->
-                    <source media="(min-width: 767px)" srcset="../assets/photos/poutama/string-orchestra_ls.jpg">
-                    <img class="heroItem poutama" src="../assets/photos/poutama/string-orchestra_portrait.jpg" alt="Mr Kovacev conducting the school string orchestra and jazz band at the HVHS 2024 prizegiving">
+                    <source media="(min-width: 767px)" srcset="assets/photos/poutama/string-orchestra_ls.jpg">
+                    <img class="heroItem poutama" src="assets/photos/poutama/string-orchestra_portrait.jpg" alt="Mr Kovacev conducting the school string orchestra and jazz band at the HVHS 2024 prizegiving">
                 </picture>
                 <p>Home</p>
             </a>
-            <a class="poutama middle centre" href="../html/registration-info.html">
+            <a class="poutama middle centre" href="html/registration-info.html">
                 <picture> <!-- Guitar-Sheet-Music -->
-                    <source media="(min-width: 767px)" srcset="../assets/photos/poutama/guitar-sheet-music_ls.jpg">
-                    <img class="heroItem poutama" src="../assets/photos/poutama/guitar-sheet-music_portrait.jpg" alt="Mr Kovacev conducting the school string orchestra and jazz band at the HVHS 2024 prizegiving">
+                    <source media="(min-width: 767px)" srcset="assets/photos/poutama/guitar-sheet-music_ls.jpg">
+                    <img class="heroItem poutama" src="assets/photos/poutama/guitar-sheet-music_portrait.jpg" alt="Mr Kovacev conducting the school string orchestra and jazz band at the HVHS 2024 prizegiving">
                 </picture>
                 <p>Registration</p>
             </a>
