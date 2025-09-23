@@ -71,12 +71,12 @@ dropDownTemplate.innerHTML = `
                 </picture>
                 <p>Notices</p>
             </a>
-            <a class="poutama bottom left" href="${pathStart}html/about.html">
+            <a class="poutama bottom left" href="${pathStart}html/courses-info.html">
                 <picture> <!-- Guitar-Group -->
                     <source media="(min-width: 767px)" srcset="${pathStart}assets/photos/poutama/guitar-group_ls.jpg">
                     <img class="heroItem poutama" src="${pathStart}assets/photos/poutama/guitar-group_portrait.jpg" alt="Mr Kovacev conducting the school string orchestra and jazz band at the HVHS 2024 prizegiving">
                 </picture>
-                <p>About Us</p>
+                <p>Courses</p>
             </a>
             <a class="poutama bottom centre" href="${pathStart}html/the-staff.html">
                 <picture> <!-- Mrk-conducting -->

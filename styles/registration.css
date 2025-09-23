@@ -24,6 +24,9 @@
 #groups-header::before {
     background-image: url(../assets/photos/headers/volante-prizegiving-header.jpg);
 }
+#courses-header::before {
+    background-image: url(../assets/photos/headers/guitar-sheetmusic-header.jpg);
+}
 
 .header-embel {
     position: absolute;
@@ -147,6 +150,7 @@ a {
     color: var(--color-dark-green);
     font-weight: bold;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 
 .end-cta {

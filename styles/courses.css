@@ -1,0 +1,153 @@
+.course {
+    /* height: 100vh; */
+    padding: 2em;
+    /* background-color: var(--color-dark-green); */
+    /* color: white; */
+
+    display: grid;
+    align-items: center;
+    position: relative;
+}
+
+.text-container {
+    width: 50%;
+    max-width: 1000px;
+}
+
+.course-links {
+    position: sticky;
+    top: 9%;
+    z-index: 5;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    margin: 0 auto;
+    padding: 0.5em;
+    background-color: var(--color-main-turq);
+}
+.course-links a {
+    font-size: 1rem;
+}
+.course-links a:hover {
+    text-decoration: underline;
+}
+
+.course-name {
+    grid-column: 1 / -1;
+    justify-items: center;
+
+    margin-bottom: 2em;
+}
+
+.course-name p {
+    font-weight: 300;
+    margin: 0;
+}
+.course-name .desc {
+    margin-top: 0.7em;
+    font-size: 1.5rem;
+    font-style: italic;
+}
+.course-name h2 {
+    margin: 0;
+}
+.course-name h2::before, .course-name h2::after {
+    content: '';
+    border-bottom: 3px var(--color-accent-gold) solid;
+    position: absolute;
+    width: 35vw;
+}
+.course-name h2::before {
+    left: 0;
+}
+.course-name h2::after {
+    right: 0;
+}
+
+.text ul {
+    font-size: 0.8em;
+}
+
+.course.left {
+    grid-template-columns: 1fr;
+}
+
+.course.centre {
+    grid-template-columns: 1fr;
+}
+.course.centre p {
+    text-align: center;
+}
+
+.course.right {
+    grid-template-columns: 1fr;
+}
+.course.right p {
+    text-align: right;
+}
+
+.course.text-only p {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+}
+
+.accompany {
+    justify-self: center;
+    width: 90%;
+    height: 75%;
+    background-color: var(--color-accent-gold);
+}
+
+@media (min-width: 767px) {
+    .header {
+        padding-top: 7em;
+    }
+    .header h1 {
+        font-size: 5rem;
+    }
+    .header p {
+        font-size: 2rem;
+    }
+
+    .end-welcome {
+        font-size: 2.5rem;
+    }
+
+}
+@media (min-width: 600px) {
+    .course.left {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .course.centre {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+    .course.centre p {
+        grid-column-start: 2;
+    }
+    .course.centre .accompany:first-of-type {
+        justify-self: start;
+    }
+
+    .course.right {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+    .course.right p {
+        grid-column-start: 3;
+    }
+    .course.right .accompany, .course.left .accompany {
+        /* grid-column-end: span 2; */
+    }
+    .course.right .accompany {
+        justify-self: start;
+        grid-row-start: 1;
+        grid-column-start: 1;
+    }
+
+    .accompany {
+        justify-self: end;
+    }
+}
