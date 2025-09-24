@@ -1,13 +1,13 @@
 .course {
-    /* height: 100vh; */
-    padding: 2em;
-    /* background-color: var(--color-dark-green); */
-    /* color: white; */
+    padding: 2em 0.5em 2em 2em;
 
     display: grid;
+    gap: 1rem;
     align-items: center;
     position: relative;
-}
+
+    scroll-margin-top: 50px;
+} 
 
 .text-container {
     width: 50%;
@@ -16,14 +16,18 @@
 
 .course-links {
     position: sticky;
-    top: 9%;
-    z-index: 5;
+    /* top: 93%; */
+    /* top: 9%; */
+    top: 1%;
+    z-index: 100;
 
     display: flex;
     justify-content: space-evenly;
 
-    width: 100%;
-    margin: 0 auto;
+    width: 75%;
+    margin: 0 8% 0 17%;
+    /* width: 100%;
+    margin: 0 auto; */
     padding: 0.5em;
     background-color: var(--color-main-turq);
 }
@@ -66,8 +70,21 @@
     right: 0;
 }
 
+.text {
+    font-size: 0.9em;
+}
+
 .text ul {
-    font-size: 0.8em;
+    font-size: 1em;
+}
+
+.text .skills {
+    font-size: 0.85em;
+}
+
+.skills .skill-name {
+    font-weight: bold;
+    font-size: 0.95em;
 }
 
 .course.left {
@@ -94,11 +111,32 @@
     width: 75%;
 }
 
-.accompany {
+.assessments {
+    /* grid-row-start: 3;
+    grid-column: 1 / -1; */
     justify-self: center;
-    width: 90%;
-    height: 75%;
-    background-color: var(--color-accent-gold);
+    color: white;
+    align-self: start;
+    font-size: 0.9rem;
+    padding: 1em;
+    border-collapse: collapse;
+    border: 7px solid var(--color-dark-green);
+}
+.assessments tr > td:nth-child(n + 3) {
+    text-align: center;
+}
+.assessments tr:nth-child(odd) {
+    background-color: var(--color-dark-green-light); 
+}
+.assessments tr:nth-child(even) {
+    background-color: var(--color-dark-green-mid); 
+}
+.assessments tr:first-of-type, .assessments tr:last-of-type {
+    background-color: var(--color-dark-green);
+    font-size: 1.2em;
+}
+.assessments tr > * {
+    padding: 0.5em 1em;
 }
 
 @media (min-width: 767px) {
@@ -119,7 +157,7 @@
 }
 @media (min-width: 600px) {
     .course.left {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .course.centre {
