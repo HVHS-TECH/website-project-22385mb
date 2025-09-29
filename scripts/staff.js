@@ -16,8 +16,9 @@ window.addEventListener("resize", scrollingStaff)
 // For each staffNote add a click event to open the staff info card
 const staffNotes = document.querySelectorAll(".staff-note");
 staffNotes.forEach((note) => {
-    note.addEventListener("click", (event) => {
+    note.addEventListener("mouseenter", (event) => {
         event.stopPropagation();
+        closeStaffCard();
         var target = event.target;
         while(target.classList[0] != "staff-note") {
             target = target.parentElement;
@@ -28,6 +29,9 @@ staffNotes.forEach((note) => {
 // Add events for closing the staff info card
 document.querySelector(".staff-interactive").addEventListener("click", closeStaffCard , {capture: true});
 document.querySelector(".exit-card").addEventListener("click", closeStaffCard);
+document.querySelectorAll(".info-card").forEach((card) => {
+    card.addEventListener("mouseleave", closeStaffCard);
+});
 
 /**********************************/
 // scrollingStaff()
