@@ -1,3 +1,4 @@
+// Get key page elements
 const chevrons = document.querySelectorAll(".chevron");
 const totalCardsNum = Number(document.querySelectorAll(".cards-container > .card").length);
 
@@ -16,7 +17,7 @@ chevrons.forEach((chevron) => {
 //      _direction - specify either "left" or "right" to direct which way the slideshow moves 
 /**********************************/
 function changeCard(_direction) {
-    //Setting up variables for the next card and the card behind it
+    //Setting up variables for all the cards which will be changed
     var nextCardNum;
     var hiddenCardNum;
     var oppDirection;
@@ -25,6 +26,7 @@ function changeCard(_direction) {
     const currentCard = document.querySelector(".card.current");
     const currentCardNum = Number(currentCard.getAttribute("data-card-num"));
 
+    // Get the nexCard, and the card behind it as well as the opposite direction to what was clicked
     if(_direction == "left") {
         nextCardNum = checkForSlideEnd(currentCardNum + 1);
         hiddenCardNum = checkForSlideEnd(nextCardNum + 1);
@@ -34,6 +36,7 @@ function changeCard(_direction) {
         hiddenCardNum = checkForSlideEnd(nextCardNum - 1);
         oppDirection = "left";
     }
+    // Get the HTML elements of each card(next card, card behind it, the card which the current is replacing)
     var nextCard = document.querySelector(`.card[data-card-num="${nextCardNum}"]`);
     var hiddenCard = document.querySelector(`.card[data-card-num="${hiddenCardNum}"]`);
     var lastCard = document.querySelector(`.card.behind.${_direction}`);
@@ -58,25 +61,45 @@ function changeCard(_direction) {
     changeInfoCard(nextCardNum, currentCardNum);
 }
 
+/**********************************/
+// manageAnimClasses(_card, _newAnim)
+// Change the aniamtion class of the card element
+// INPUT
+//      _card - the card which is being changed
+//      _newAnim - the new animation class
+/**********************************/
 function manageAnimClasses(_card, _newAnim) {
-    const re = /\w{4,}-\w{4,}/;
+    const classStructure = /\w{4,}-\w{4,}/;
     let classes = Array.from(_card.classList);
-    let animClass = classes.find(value => value.match(re));
+    let animClass = classes.find(value => value.match(classStructure));
 
     _card.classList.remove(animClass);
     _card.classList.add(_newAnim);
 }
 
-function checkForSlideEnd(_card) {
-    if(_card == 0) {
+/**********************************/
+// checkForSlideEnd(_card)
+// Makes sure the card number isn't 0 or above the actual number of cards
+// INPUT
+//      _cardNum - the card number to be checked
+/**********************************/
+function checkForSlideEnd(_cardNum) {
+    if(_cardNum == 0) {
         return totalCardsNum;
-    } else if(_card == (totalCardsNum + 1)) {
+    } else if(_cardNum == (totalCardsNum + 1)) {
         return 1;
     } else {
-        return _card;
+        return _cardNum;
     }
 }
 
+/**********************************/
+// changeInfoCard(_newCardNum, _oldCardNum)
+// Change the current info card to the next one in the slideshow
+// INPUT
+//      _newCardNum - the new info card num which will be made visible
+//      _oldCardNum - the previous info card num which will be hidden
+/**********************************/
 function changeInfoCard(_newCardNum, _oldCardNum) {
     let newInfo = document.querySelector(`.group-info[data-card-num="${_newCardNum}"]`);
     let oldInfo = document.querySelector(`.group-info[data-card-num="${_oldCardNum}"]`);

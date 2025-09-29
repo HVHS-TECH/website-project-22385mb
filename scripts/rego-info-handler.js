@@ -1,9 +1,11 @@
 //creating an interval for an automatic slideshow change
 var slideInterval = setInterval(changeCard, 5000, "right", true);
 
+// Get key elements from the page
 const chevrons = document.querySelectorAll(".chevron");
 const totalCardsNum = Number(document.querySelector(".cards-container").childElementCount);
 
+// When a chevron is clicked it triggers the change card function
 chevrons.forEach((chevron) => {
     chevron.addEventListener("click", (event) => {
         let direction = event.target.id.split("-")[1];
@@ -24,16 +26,15 @@ function changeCard(_direction, _automatic) {
         clearInterval(slideInterval);
         slideInterval = setInterval(changeCard, 5000, "right", true);
     }
-
+    // Get the current card 
     const currentCard = document.querySelector(".card.current");
     const currentCardNum = Number(currentCard.getAttribute("data-card-num"));
     var nextCardNum;
 
+    // Get the next card
     if(_direction == "left") {
-        // currentCard.previousElementSibling.classList.add("current");
         nextCardNum = currentCardNum - 1;
     } else if(_direction == "right"){
-        // currentCard.nextElementSibling.classList.add("current");
         nextCardNum = currentCardNum + 1;
     }
 
@@ -44,7 +45,7 @@ function changeCard(_direction, _automatic) {
         nextCardNum = 1;
     }
 
-    //
+    // Change the current card
     document.querySelector(`.card[data-card-num="${nextCardNum}"]`).classList.add("current");
     currentCard.classList.remove("current");
 }

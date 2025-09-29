@@ -1,9 +1,15 @@
+/******************************************/
+// staff.js
+// Code for the staff page feature
+// Opening and closing staff info
+// Scrolling and links to sections
+/******************************************/
 import { animate, scroll } from "https://cdn.jsdelivr.net/npm/motion@12.23.12/+esm";
 
 //Array of distances needed to scroll to reach each section
 var scrollDistances = {}
 
-// On load run scrollingStaff() to set distances also do the same eveyrtime the screen resizes
+// On load run scrollingStaff() to set distances also do the same everytime the screen resizes
 window.onload = scrollingStaff();
 window.addEventListener("resize", scrollingStaff)
 
@@ -38,10 +44,8 @@ function scrollingStaff() {
         staffWidth += bound.width;
         scrollDistances[collection.id] = bound.x;
     })
-    scrollDistances["container"] = Math.abs(document.querySelector(".staff-interactive").getBoundingClientRect().top-document.querySelector(".header").getBoundingClientRect().top);
+    scrollDistances["container"] = Math.abs(document.querySelector(".staff-interactive").getBoundingClientRect().top - document.querySelector(".header").getBoundingClientRect().top);
     console.log("container distance = " + scrollDistances["container"]);
-    // console.log(document.querySelector(".header").getBoundingClientRect());
-    // scrollDistances["container"] = 920;
 
     scroll(
         animate(".staff-container",
@@ -53,6 +57,7 @@ function scrollingStaff() {
     document.querySelector(".stave").style.width = staffWidth + 500;
 }
 
+// Add event listenr for the section links
 document.querySelectorAll(".scroll-link").forEach((_link) => {
     _link.addEventListener("click", (event) => {
         scrollToStaffSection(event.target.innerHTML);
@@ -73,11 +78,21 @@ function scrollToStaffSection(_section) {
     })
 }
 
+/**********************************/
+// showStaffInfo(_staffMember)
+// Open a sepcific staff members info card
+// INPUT
+//      _staffMember - the name of the staff member which corresponds to the info card's ID
+/**********************************/
 function showStaffInfo(_staffMember) {
     var infoCard = document.querySelector(`.info-card#${_staffMember}`);
     infoCard.classList.add("info-card-show");
 }
 
+/**********************************/
+// closeStaffCard()
+// Close the current infor card
+/**********************************/
 function closeStaffCard() {
     let currentCard = document.querySelector(".info-card-show");
     if(currentCard != null) {
