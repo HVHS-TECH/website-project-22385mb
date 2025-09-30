@@ -38,6 +38,10 @@ body {
     font-size: 1.2rem;
 }
 
+#index-body {
+    background: linear-gradient(180deg, var(--color-main-turq) 30%, var(--color-background) 50%);
+}
+
 .btn {
     background-color: var(--color-dark-green);
     color: var(--color-white);
