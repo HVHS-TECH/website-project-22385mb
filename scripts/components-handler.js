@@ -108,39 +108,39 @@ footerTemplate.innerHTML = `
         <div class="poutama middle left"></div>
         <div class="poutama middle centre"></div>
         <div class="poutama bottom left"></div>
-        <div class="logo">
-            <img src="${pathStart}assets/graphics/HVHS-Logo.svg" alt="Hutt Valley High School's Ad Alta Logo">
-        </div>
-        <div class="blurb">
-            <p>This is a cool blurb telling you all about the HVHS music department and why you should join!</p>
-            <a class="btn" href="${pathStart}html/registration-info.html">Sign Up For Lessons</a>
+        <div class="poutama-content">
+            <div class="logo">
+                <img src="${pathStart}assets/graphics/HVHS-Logo.svg" alt="Hutt Valley High School's Ad Alta Logo">
+            </div>
+            <div class="contact-info">
+                <h5>Contact Us</h5>
+                <p><img src="${pathStart}assets/graphics/footer-icons/akar-icons--location.svg" alt="Location icon."> 84-114 Woburn Road, Woburn, 5010, Lower Hutt</p>
+                <p><img src="${pathStart}assets/graphics/footer-icons/akar-icons--envelope.svg" alt="Email address icon."> music@hvhs.school.nz</p>
+            </div>
         </div>
         <div class="external-links">
-                <a target="_blank" href="https://www.hvhs.school.nz"><img src="${pathStart}assets/graphics/footer-icons/akar-icons--globe.svg" alt="Visit the HVHS school website."></a>
-                <a target="_blank" href="https://www.youtube.com/@gracewright8894/featured"><img src="${pathStart}assets/graphics/footer-icons/akar-icons--youtube-fill.svg" alt="Visit the Music Department's youtube channel."></a>
-                <a target="_blank" href="https://www.instagram.com/hvhsofficial/"><img src="${pathStart}assets/graphics/footer-icons/akar-icons--instagram-fill.svg" alt="Visit the Music Department's instagram page."></a>
-                <a target="_blank" href="https://www.facebook.com/hvhs.school.nz"><img src="${pathStart}assets/graphics/footer-icons/akar-icons--facebook-fill.svg" alt="Visit the Music Department's facebook page."></a>
-        </div>
-        <div class="contact-info">
-            <h5>Contact Us</h5>
-            <p><img src="${pathStart}assets/graphics/footer-icons/akar-icons--location.svg" alt="Location icon."> 84-114 Woburn Road, Woburn, 5010, Lower Hutt</p>
-            <p><img src="${pathStart}assets/graphics/footer-icons/akar-icons--envelope.svg" alt="Email address icon."> music@hvhs.school.nz</p>
+            <a target="_blank" href="https://www.hvhs.school.nz"><img src="${pathStart}assets/graphics/footer-icons/akar-icons--globe.svg" alt="Visit the HVHS school website."></a>
+            <a target="_blank" href="https://www.youtube.com/@gracewright8894/featured"><img src="${pathStart}assets/graphics/footer-icons/akar-icons--youtube-fill.svg" alt="Visit the Music Department's youtube channel."></a>
+            <a target="_blank" href="https://www.instagram.com/hvhsofficial/"><img src="${pathStart}assets/graphics/footer-icons/akar-icons--instagram-fill.svg" alt="Visit the Music Department's instagram page."></a>
+            <a target="_blank" href="https://www.facebook.com/hvhs.school.nz"><img src="${pathStart}assets/graphics/footer-icons/akar-icons--facebook-fill.svg" alt="Visit the Music Department's facebook page."></a>
         </div>
         <!-- <p class="links-header">Quick Links</p> -->
-        <div class="links">
-            <p>See the latest</p>
-            <a href="${pathStart}index.html">Home</a>
-            <a>Notices</a>
-        </div>
-        <div class="links">
-            <p>Sign Up</p>
-            <a href="${pathStart}html/registration-info.html">Registration Information</a>
-        </div>
-        <div class="links">
-            <p>Find out More</p>
-            <a href="${pathStart}html/about.html">About</a>
-            <a href="${pathStart}html/the-staff.html">Staff</a>
-            <a href="${pathStart}html/music-groups.html">Groups</a>
+        <div class="site-map">
+            <div class="links">
+                <p>See the latest</p>
+                <a href="${pathStart}index.html">Home</a>
+                <a>Notices</a>
+            </div>
+            <div class="links">
+                <p>Find out More</p>
+                <a href="${pathStart}html/about.html">About</a>
+                <a href="${pathStart}html/the-staff.html">Staff</a>
+                <a href="${pathStart}html/music-groups.html">Groups</a>
+            </div>
+            <div class="links">
+                <p>Sign Up</p>
+                <a href="${pathStart}html/registration-info.html">Registration Information</a>
+            </div>
         </div>  
         <div class="copyright-notice">
             <p>© 2025 Hutt Valley High School | Design & Code by Miles Baldwin
