@@ -4,6 +4,7 @@
 :root {
     /*** COLOUR VARIABLES ***/
     --color-background: #DFEBF2;
+    --color-background-faded: rgb(223, 235, 242, 0.5);
     --color-main-turq: #5FD9D9;
     --color-dark-green: #025C5C;
     --color-dark-green-light: rgb(2, 92, 92, 0.5);
@@ -25,6 +26,11 @@
 img {
     display: block;
     max-inline-size: 100%;
+}
+
+.poutama img {
+    height: 100%;
+    object-fit: cover;
 }
 
 html, body {
