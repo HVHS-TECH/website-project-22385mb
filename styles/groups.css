@@ -10,29 +10,24 @@
     z-index: -1;
     --card-z-movement: -250px;
     --card-x-movement: 100%;
-
-    /* animation: spin 20s infinite; */
 }
 
 .cards {
     transform: translateZ(-300px);
 }
 
-.card.behind.left {
-    /* animation: spin-hidden-left 5s forwards; */
-    transform: rotateY(-45deg) translateX(calc(var(--card-x-movement) * -1)) translateZ(var(--card-z-movement));
-}
-.card.behind.right {
-    /* animation: spin-center-right 5s forwards; */
-    transform: rotateY(45deg) translateX(var(--card-x-movement)) translateZ(var(--card-z-movement));
-}
 .card {
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
-    /* transform: rotateY(0deg) translateZ(var(--card-z-movement)); */
+}
+.card.behind.left {
+    transform: rotateY(-45deg) translateX(calc(var(--card-x-movement) * -1)) translateZ(var(--card-z-movement));
+}
+.card.behind.right {
+    transform: rotateY(45deg) translateX(var(--card-x-movement)) translateZ(var(--card-z-movement));
 }
 
-/*** Right Rotation ***/
+/*** Right Spin ***/
 .center-right {
     --spin-direction: var(--right);
     animation-name: spin-center;
@@ -49,6 +44,7 @@
     --spin-direction: var(--right);
     animation-name: spin-right;
 }
+
 /*** Left Spin ***/
 .center-left {
     --spin-direction: var(--left);
@@ -66,20 +62,6 @@
     --spin-direction: var(--right);
     animation-name: spin-hidden;
 }
-
-.groups-illustrations {
-    position: absolute;
-    bottom: 0;
-    transform: translateX(-25%) translateZ(-200px);
-    /* width: 200%; */
-    /* height: 200% */
-}
-
-.groups-illustrations img {
-    /* width: 200%; */
-    height: 500px;
-}
-
 
 
 @keyframes spin-left {
