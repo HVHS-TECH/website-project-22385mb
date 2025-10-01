@@ -139,6 +139,10 @@
     padding: 0.5em 1em;
 }
 
+.collapsed {
+    display: none;
+}
+
 @media (min-width: 767px) {
     .header {
         padding-top: 7em;
