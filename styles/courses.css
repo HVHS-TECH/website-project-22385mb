@@ -1,18 +1,12 @@
 .course {
-    padding: 2em 0.5em 2em 2em;
-
+    position: relative;
     display: grid;
     gap: 1rem;
     align-items: center;
-    position: relative;
+    padding: 2em 1em 2em 1em;
 
     scroll-margin-top: 50px;
 } 
-
-.text-container {
-    width: 50%;
-    max-width: 1000px;
-}
 
 .course-links {
     position: sticky;
@@ -33,6 +27,8 @@
 }
 .course-links a {
     font-size: 1rem;
+    color: var(--color-dark-green);
+    font-weight: bold;
 }
 .course-links a:hover {
     text-decoration: underline;
@@ -53,6 +49,7 @@
     margin-top: 0.7em;
     font-size: 1.5rem;
     font-style: italic;
+    text-align: center;
 }
 .course-name h2 {
     margin: 0;
@@ -111,24 +108,30 @@
     width: 75%;
 }
 
+.collapse {
+    grid-row-start: 3;
+    grid-column: 1 / -1;
+}
+
+.collapsed {
+    display: none;
+}
+
 .assessments {
-    /* grid-row-start: 3;
-    grid-column: 1 / -1; */
     justify-self: center;
     color: white;
-    align-self: start;
     font-size: 0.9rem;
-    padding: 1em;
+    padding: 0;
     border-collapse: collapse;
     border: 7px solid var(--color-dark-green);
 }
 .assessments tr > td:nth-child(n + 3) {
     text-align: center;
 }
-.assessments tr:nth-child(odd) {
+.assessments tr:nth-child(odd), .assessments .section:nth-child(odd) {
     background-color: var(--color-dark-green-light); 
 }
-.assessments tr:nth-child(even) {
+.assessments tr:nth-child(even), .assessments .section:nth-child(even) {
     background-color: var(--color-dark-green-mid); 
 }
 .assessments tr:first-of-type, .assessments tr:last-of-type {
@@ -139,11 +142,52 @@
     padding: 0.5em 1em;
 }
 
-.collapsed {
-    display: none;
+.assessments .section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 1em;
+    border: 1px solid var(--color-dark-green);
+}
+.assessments .section p:nth-child(-n + 2) {
+    grid-column-end: span 2;
+}
+.assessments .section .num {
+    margin-bottom: 0;
+    font-style: italic;
+    font-size: 0.8em;
+}
+.assessments .section .name {
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+.assessments .section p:nth-child(n + 3) {
+    margin-top: 0;
+}
+.assessments .section .credits::after {
+    content: " Credits";
+}
+
+.assessments .section.total p:nth-child(1), .section.total p:nth-child(4) {
+    grid-column-end: span 1;
+    grid-row: 1;
+    font-weight: bold;
+    font-size: 1em;
+    font-style: normal;
+    margin: 1em 0;
+}
+.assessments .section.total {
+    background-color: var(--color-dark-green);
 }
 
 @media (min-width: 767px) {
+    .course {
+        padding: 2em 0.5em 2em 2em;
+    }
+    .assessments {
+        font-size: 0.9rem;
+        padding: 1em;
+    }
+
     .header {
         padding-top: 7em;
     }
@@ -191,5 +235,11 @@
 
     .accompany {
         justify-self: end;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        
     }
 }
