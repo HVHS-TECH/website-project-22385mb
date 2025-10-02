@@ -294,6 +294,8 @@
     display: flex;
     gap: 10%;
     padding: 17vh 10%;
+
+    max-height: 70vh;
 }
 
 .staff-collection {
@@ -319,38 +321,74 @@
 }
 
 .staff-note {
-    display: grid;
-    grid-template-areas: "overlap";
-    width: 50vw;
     margin-right: 10em;
+    width: 50vw;
+    height: 50vw;
     rotate: -10deg;
-
     cursor: pointer;
-}
-
-.staff-note > * {
-    grid-area: overlap;
-}
-
-.note-img {
-    clip-path: ellipse(50% 35% at 50% 50%);
-    /* clip-path: path("M 100.6225 9.0375 M 100.6225 9.0375 c -6.9075 0 -14.0175 0.6525 -21.24 2.025 c -45.045 8.55 -76.5675 41.7825 -70.4025 74.205 c 5.175 27.225 35.28 45.2475 71.4825 45.2475 c 6.9075 0 14.0175 -0.6525 21.24 -2.025 c 43.965 -8.3475 77.1075 -38.88 70.4025 -74.205 c -5.175 -27.225 -35.28 -45.2475 -71.4825 -45.2475 h -37.3725 Z"); */
-}
-
-.note-img.border {
     position: relative;
-    top: 2%;
-    left: 1%;
-    background-color: var(--color-black);
-    scale: 1.1;
 }
-
-.staff-note:hover .note-img.border {
+.staff-note:hover {
+    scale: 1.2;
+}
+.staff-note::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    scale: 1.1;
+    background-color: var(--color-black);
+    clip-path: ellipse(50% 35% at 50% 50%);
+    z-index: -1;
+}
+.staff-note:hover::before {
     background-color: var(--color-dark-green);
 }
 
-.staff-note:hover {
-    scale: 1.2;
+.line-e {
+    transform: translateY(120%);
+}
+.line-g {
+    transform: translateY(70%);
+}
+.line-b {
+    transform: translateY(10%);
+}
+.line-d {
+    transform: translateY(-50%);
+}
+.line-f {
+    transform: translateY(-100%);
+}
+.space-f {
+    transform: translateY(100%);
+}
+.space-a {
+    transform: translateY(30%);
+}
+.space-c {
+    transform: translateY(-20%);
+}
+.space-e {
+    transform: translateY(-70%);
+}
+
+.chord {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+}
+.chord > * {
+    margin-bottom: -25%;
+    scale: 0.7;
+}
+.chord > *:hover {
+    scale: 0.8;
+}
+
+.note-img {
+    width: 100%;
+    clip-path: ellipse(50% 35% at 50% 50%);
 }
 
 .bar-lines {
@@ -432,6 +470,7 @@
     .staff-note {
         margin-right: 7em;
         width: 25vw;
+        height: 25vw;
     }
 }
 
@@ -445,6 +484,7 @@
     .staff-note {
         margin-right: 7em;
         width: 15vw;
+        height: 15vw;
     }
 
     .info-card {
