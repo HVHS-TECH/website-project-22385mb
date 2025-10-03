@@ -42,7 +42,7 @@ document.querySelectorAll(".info-card").forEach((card) => {
 /**********************************/
 function scrollingStaff() {
     var staffWidth = 0;
-    const staffCollections = document.querySelectorAll(".staff-collection");
+    const staffCollections = document.querySelectorAll(".notes-collection");
     staffCollections.forEach((collection) => {
         let bound = collection.getBoundingClientRect()
         staffWidth += bound.width;

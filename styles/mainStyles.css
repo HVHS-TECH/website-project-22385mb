@@ -201,45 +201,52 @@ body {
 
 .staffHero {
     position: relative;
-    
     width: 100%;
+}
+.stave {
+    position: absolute;
+}
+.staffHero .stave {
+    transform: translateY(-15%);
+}
+
+.notes-collection {
+    display: flex;
 }
 
 .note {
-    position: absolute;
-
-    display: grid;
-    grid-template-areas: "overlap";
-    width: 17%;
-    height: 17%;
-}
-.note > * {
-    grid-area: overlap;
+    position: relative;
+    width: 15%;
+    height: 15%;
+    rotate: -10deg;
 }
 
 .note-img {
     clip-path: ellipse(50% 35% at 50% 50%);
 }
 
-.note-img.border {
-    position: relative;
-    top: 2%;
-    left: 1%;
-    background-color: var(--color-black);
+.note::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
     scale: 1.1;
+    background-color: var(--color-black);
+    clip-path: ellipse(50% 35% at 50% 50%);
 }
 
-.note.single {
+.staffHero .note:nth-child(1) {
     left: 10%;
-    bottom: 20%;
+    top: 1rem;
 }
-.note.double {
-    right: 36%;
-    bottom: 40%;
+.staffHero .note:nth-child(2) {
+    left: 30%;
+    bottom: 0.5rem;
 }
-.note.double + .note.double {
-    right: 5%;
-    bottom: 75%;
+.staffHero .note:nth-child(3) {
+    left: 50%;
+    bottom: 1.5rem;
 }
 
 .image-embellishment {
@@ -264,6 +271,16 @@ body {
 @media (min-width: 600px) {
     body {
         font-size: 1.3rem;
+    }
+
+    .staffHero .note:nth-child(1) {
+        top: 1.5rem;
+    }
+    .staffHero .note:nth-child(2) {
+        bottom: 1rem;
+    }
+    .staffHero .note:nth-child(3) {
+        bottom: 2.5rem;
     }
 }
 
@@ -325,5 +342,15 @@ body {
 
     .groupText {
         font-size: 1.3rem;
+    }
+
+    .staffHero .note:nth-child(1) {
+        top: 1.5rem;
+    }
+    .staffHero .note:nth-child(2) {
+        bottom: 0.5rem;
+    }
+    .staffHero .note:nth-child(3) {
+        bottom: 2.5rem;
     }
 }
