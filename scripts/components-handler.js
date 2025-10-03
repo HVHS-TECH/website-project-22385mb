@@ -156,16 +156,14 @@ groupInfoTemplate.innerHTML = `
     @import url(${pathStart}styles/registration.css)
 </style>
     <div class="group-info current" data-card-num="2">
-        <h4 class="group-name"><slot name="name">Group Name</slot></h4>
-        <p class="group-coord">With <slot name="coord" class="bold">Chris Buckland</slot></p>
+        <h4 class="group-name">Group Name</h4>
+        <p class="group-coord">With <span class="bold coord">Tutor Name</span></p>
         <slot name="blurb">
-            <p>
-                The HVHS Barbershop Quartet is cool.
-            </p>
+            <p>The group is always on the lookout for new members so don't hesitate to pop in or contact the tutor!</p>
         </slot>
-        <p class="times">Jazz Band meets on Wednesdays at 1:30pm in M1</p>
+        <p class="times"><span class="name">Group</span> meets on <span class="day">Wednesdays</span> at <span class="time">1:30pm</span> in <span class="locale">M1</span></p>
         <br>
-        <a class="btn">Contact</a>
+        <a class="btn" href="mailto:music@hvhs.school.nz">Contact</a>
         <div class="group-imgs">
             <img class="group-img" src="${pathStart}assets/photos/squares/prizegiving-jazz-band.jpg">
             <img class="group-img" src="${pathStart}assets/photos/squares/prizegiving-jazz-band.jpg">
@@ -215,8 +213,31 @@ class GroupInfo extends HTMLElement {
 
         const shadowRoot = this.attachShadow({ mode: 'open'});
         let clone = groupInfoTemplate.content.cloneNode(true);
-
         shadowRoot.append(clone);
+
+        this.timeAttr = ['day', 'time', 'locale'];
+    }
+
+    static get observedAttributes() {
+        return ['name', 'coord', 'contact', 'day', 'time', 'locale'];
+    }
+
+    attributeChangedCallback(attrName, oldVal, newVal) {
+        if(attrName.toLowerCase() == 'contact') {
+            let contactBtn = this.shadowRoot.querySelector(`a`);
+            contactBtn.href = `mailto:${newVal}`;
+        } else if(this.timeAttr.includes(attrName.toLowerCase())) {
+            let timesElement = this.shadowRoot.querySelector(`.times .${attrName}`);
+            timesElement.innerHTML = newVal;
+        } else if (attrName.toLowerCase() == 'name'){
+            let groupNameElement = this.shadowRoot.querySelector(`.group-${attrName}`);
+            let timesElement = this.shadowRoot.querySelector(`.times .${attrName}`);
+            groupNameElement.innerHTML = newVal;
+            timesElement.innerHTML = newVal;
+        } else if(attrName.toLowerCase() == 'coord') {
+            let element = this.shadowRoot.querySelector(`.group-coord .coord`);
+            element.innerHTML = newVal;
+        }
     }
 }
 
