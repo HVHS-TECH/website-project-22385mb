@@ -190,6 +190,17 @@
     }
 }
 
+@media (min-width: 767px) {
+    .group-slideshow .cards-container {
+        width: 30%;
+    }
+}
+@media (min-width: 1024px) {
+    .group-slideshow .cards-container {
+        width: 20%;
+    }
+}
+
 .group-info:not(.current) {
     display: none;
 }

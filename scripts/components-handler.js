@@ -134,7 +134,7 @@ footerTemplate.innerHTML = `
             </div>
             <div class="links">
                 <p>Find out More</p>
-                <a href="${pathStart}html/about.html">About</a>
+                <a href="${pathStart}html/courses-info.html">Courses</a>
                 <a href="${pathStart}html/the-staff.html">Staff</a>
                 <a href="${pathStart}html/music-groups.html">Groups</a>
             </div>
