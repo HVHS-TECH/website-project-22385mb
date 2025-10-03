@@ -101,8 +101,8 @@ function checkForSlideEnd(_cardNum) {
 //      _oldCardNum - the previous info card num which will be hidden
 /**********************************/
 function changeInfoCard(_newCardNum, _oldCardNum) {
-    let newInfo = document.querySelector(`.group-info[data-card-num="${_newCardNum}"]`);
-    let oldInfo = document.querySelector(`.group-info[data-card-num="${_oldCardNum}"]`);
+    let newInfo = document.querySelector(`group-info-card[data-card-num="${_newCardNum}"]`);
+    let oldInfo = document.querySelector(`group-info-card[data-card-num="${_oldCardNum}"]`);
     if(newInfo != null) {
         newInfo.classList.add("current");
     }

@@ -179,7 +179,6 @@
 }
 
 .group-info {
-    width: 100%;
     padding: 1.5em 1em 0em 1em;
     background-color: var(--color-dark-green-light);
 }
@@ -201,7 +200,7 @@
     }
 }
 
-.group-info:not(.current) {
+group-info-card:not(.current) {
     display: none;
 }
 
