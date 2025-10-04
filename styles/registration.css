@@ -400,7 +400,7 @@ group-info-card:not(.current) {
     transform: translateX(-50%);
     z-index: 20;
 
-    display: none;
+    display: grid;
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
@@ -414,7 +414,10 @@ group-info-card:not(.current) {
 }
 
 .info-card-show {
-    display: grid;
+    display: block;
+}
+staff-info-card {
+    display: none;
 }
 
 .info-card .details > * {
