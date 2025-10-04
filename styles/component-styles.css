@@ -118,7 +118,8 @@ footer .contact-info {
     color: var(--color-white);
 }
 
-footer .contact-info > h5 {
+footer .contact-info > p {
+    font-size: 1.3rem;
     margin: 0;
     text-decoration: underline;
     font-weight: normal;

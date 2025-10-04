@@ -14,6 +14,11 @@
 /************************/
 /*** WHOLE SITE STYLING ***/
 /************************/
+nav-bar {
+    height: 10vh;
+    width: 100vw;
+
+}
 * {
     box-sizing: border-box;
     /* margin: 0; */

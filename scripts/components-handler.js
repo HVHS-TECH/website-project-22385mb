@@ -113,7 +113,7 @@ footerTemplate.innerHTML = `
                 <img src="${pathStart}assets/graphics/HVHS-Logo.svg" alt="Hutt Valley High School's Ad Alta Logo">
             </div>
             <div class="contact-info">
-                <h5>Contact Us</h5>
+                <p>Contact Us</p>
                 <a><img src="${pathStart}assets/graphics/footer-icons/akar-icons--location.svg" alt="Location icon."> 84-114 Woburn Road, Woburn, 5010, Lower Hutt</a>
                 <a target="_blank" href="mailto:music@hvhs.school.nz"><img src="${pathStart}assets/graphics/footer-icons/akar-icons--envelope.svg" alt="Email address icon."> music@hvhs.school.nz</a>
                 <a target="_blank" href="tel:+6445664584"><img src="${pathStart}assets/graphics/footer-icons/akar-icons--phone.svg" alt="Phone icon."> +64 4 566 4584</a>
