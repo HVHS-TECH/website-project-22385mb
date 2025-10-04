@@ -1,3 +1,19 @@
+// Mobile Links menu code
+document.querySelector('.menu').addEventListener("click", () => {
+    let menu = document.querySelector(".course-links");
+    if(menu.classList.contains("hidden")) {
+        menu.classList.remove("hidden");
+    } else {
+        menu.classList.add("hidden");
+    }
+})
+document.querySelectorAll(".course-links a").forEach((link) => {
+    link.addEventListener("click", () => {
+        let menu = document.querySelector(".course-links");
+        menu.classList.add("hidden");
+    })
+});
+
 const collapsables = document.querySelectorAll(".collapse");
 collapsables.forEach((collapsable) => {
     collapsable.querySelector(".btn").addEventListener("click", expandSection);

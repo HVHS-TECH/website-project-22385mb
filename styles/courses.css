@@ -10,25 +10,33 @@
 
 .course-links {
     position: sticky;
-    /* top: 93%; */
-    /* top: 9%; */
-    top: 1%;
-    z-index: 100;
+    top: 9%;
+    z-index: 99;
 
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
 
     width: 75%;
-    margin: 0 8% 0 17%;
-    /* width: 100%;
-    margin: 0 auto; */
+    /* margin: 0 auto; */
     padding: 0.5em;
     background-color: var(--color-main-turq);
+}
+.course-links.hidden {
+    display: none;
+}
+.menu {
+    height: 50px;
+    width: 50px;
+    position: sticky;
+    top: 9%;
+    z-index: 100;
 }
 .course-links a {
     font-size: 1rem;
     color: var(--color-dark-green);
     font-weight: bold;
+    margin-bottom: 1em;
 }
 .course-links a:hover {
     text-decoration: underline;
@@ -69,6 +77,9 @@
 
 .text {
     font-size: 0.9em;
+    align-self: start;
+    /* grid-column: 1 / span 2;
+    padding: 0 1em; */
 }
 
 .text ul {
@@ -186,6 +197,20 @@
     .assessments {
         font-size: 0.9rem;
         padding: 1em;
+    }
+
+    .course-links {
+        position: sticky;
+        top: 1%;
+        z-index: 100;
+
+        display: flex;
+        justify-content: space-evenly;
+
+        width: 75%;
+        margin: 0 8% 0 17%;
+        padding: 0.5em;
+        background-color: var(--color-main-turq);
     }
 
     .header {
