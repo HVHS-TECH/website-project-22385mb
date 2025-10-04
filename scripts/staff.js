@@ -20,7 +20,7 @@ staffNotes.forEach((note) => {
         event.stopPropagation();
         closeStaffCard();
         var target = event.target;
-        while(target.classList[0] != "staff-note") {
+        while(target.classList.contains("staff-note") != true) {
             target = target.parentElement;
         }
         showStaffInfo(target.attributes["data-staff-member"].value);
