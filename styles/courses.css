@@ -1,6 +1,7 @@
 .course {
     position: relative;
     display: grid;
+    grid-template-columns: 1fr;
     gap: 1rem;
     align-items: center;
     padding: 2em 1em 2em 1em;
@@ -18,7 +19,6 @@
     align-items: center;
 
     width: 75%;
-    /* margin: 0 auto; */
     padding: 0.5em;
     background-color: var(--color-main-turq);
 }
@@ -75,18 +75,7 @@
     right: 0;
 }
 
-.text {
-    font-size: 0.9em;
-    align-self: start;
-    /* grid-column: 1 / span 2;
-    padding: 0 1em; */
-}
-
-.text ul {
-    font-size: 1em;
-}
-
-.text .skills {
+.text ul, .text .skills {
     font-size: 0.85em;
 }
 
@@ -95,28 +84,8 @@
     font-size: 0.95em;
 }
 
-.course.left {
+.course {
     grid-template-columns: 1fr;
-}
-
-.course.centre {
-    grid-template-columns: 1fr;
-}
-.course.centre p {
-    text-align: center;
-}
-
-.course.right {
-    grid-template-columns: 1fr;
-}
-.course.right p {
-    text-align: right;
-}
-
-.course.text-only p {
-    margin: 0 auto;
-    text-align: center;
-    width: 75%;
 }
 
 .collapse {
@@ -150,7 +119,7 @@
     font-size: 1.2em;
 }
 .assessments tr > * {
-    padding: 0.5em 1em;
+    padding: 1em 1em;
 }
 
 .assessments .section {
@@ -195,16 +164,20 @@
         padding: 2em 0.5em 2em 2em;
     }
     .assessments {
-        font-size: 0.9rem;
+        font-size: 1rem;
         padding: 1em;
     }
-
+    .text {
+        margin: 0 15%;
+    }
+}
+@media (min-width: 1024px) {
     .course-links {
         position: sticky;
         top: 1%;
         z-index: 100;
 
-        display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
 
         width: 75%;
@@ -212,59 +185,13 @@
         padding: 0.5em;
         background-color: var(--color-main-turq);
     }
-
-    .header {
-        padding-top: 7em;
+    .course-links a {
+        margin-bottom: 0;
     }
-    .header h1 {
-        font-size: 5rem;
+    .course-links.hidden {
+        display: flex;
     }
-    .header p {
-        font-size: 2rem;
-    }
-
-    .end-welcome {
-        font-size: 2.5rem;
-    }
-
-}
-@media (min-width: 600px) {
-    .course.left {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .course.centre {
-        grid-template-columns: 1fr 2fr 1fr;
-    }
-    .course.centre p {
-        grid-column-start: 2;
-    }
-    .course.centre .accompany:first-of-type {
-        justify-self: start;
-    }
-
-    .course.right {
-        grid-template-columns: 1fr 1fr 2fr;
-    }
-    .course.right p {
-        grid-column-start: 3;
-    }
-    .course.right .accompany, .course.left .accompany {
-        /* grid-column-end: span 2; */
-    }
-    .course.right .accompany {
-        justify-self: start;
-        grid-row-start: 1;
-        grid-column-start: 1;
-    }
-
-    .accompany {
-        justify-self: end;
-    }
-}
-
-@media (max-width: 600px) {
-    body {
-        
+    .menu {
+        display: none;
     }
 }

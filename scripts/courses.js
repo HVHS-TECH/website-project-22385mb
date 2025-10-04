@@ -56,7 +56,7 @@ function createMobileTable(_table) {
     let rows = _table.children[0].children;
     // Create overarching div
     let assessments = document.createElement("div");
-    assessments.classList.add("assessments", "collapsed");
+    assessments.classList.add("assessments");
 
     for(var i = 1; i < rows.length; i++) {
         let data = rows[i].children;
@@ -88,7 +88,7 @@ function createTable(_table) {
         let sections = _table.children;
         // Create overarching table
         let newTable = document.createElement("table");
-        newTable.classList.add("assessments", "collapsed");
+        newTable.classList.add("assessments");
         let tableBody = document.createElement("tbody");
 
         let row = document.createElement('tr');  
