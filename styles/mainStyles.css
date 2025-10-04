@@ -24,6 +24,22 @@ img {
     display: block;
     max-inline-size: 100%;
 }
+.credit-ac {
+    position: relative;
+}
+.credit-ac::after, .credit-gw::after {
+    content: "© Adrian Cartwright";
+    font-size: 0.2em;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    z-index: 5;
+    color: var(--color-white);
+    opacity: 0.5;
+}
+.credit-gw::after {
+    content: "© Grace Wright"
+}
 
 .poutama img {
     height: 100%;
@@ -182,7 +198,7 @@ body {
     border: 5px var(--color-black) solid;
 }
 
-.groupsImg > .mid {
+.groupsImg .mid {
     z-index: 2; 
     scale: 1.1;
 }
