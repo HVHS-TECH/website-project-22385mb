@@ -145,7 +145,10 @@ footerTemplate.innerHTML = `
         </div>  
         <div class="copyright-notice">
             <p>© 2025 Hutt Valley High School | Design & Code by Miles Baldwin
-| Photos by Adrian Cartwright | Icons licensed under <a target="_blank" href="https://github.com/artcoholic/akar-icons/blob/master/LICENSE">MIT License</a> Copyright 2020 Arturo Wibawa</p>
+            | Photos by Adrian Cartwright 
+            | Icons licensed under <a target="_blank" href="https://github.com/artcoholic/akar-icons/blob/master/LICENSE">MIT License</a> Copyright 2020 Arturo Wibawa 
+            | Fonts licensed under <a target="_blank" href="https://openfontlicense.org/open-font-license-official-text/">SIL Open Font License, Version 1.1</a>
+            </p>
         </div>
     </footer>
 `;
