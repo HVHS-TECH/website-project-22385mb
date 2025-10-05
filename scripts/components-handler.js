@@ -168,9 +168,9 @@ groupInfoTemplate.innerHTML = `
         <br>
         <a class="btn" href="mailto:music@hvhs.school.nz">Contact</a>
         <div class="group-imgs">
+            <!--<img class="group-img" src="${pathStart}assets/photos/squares/prizegiving-jazz-band.jpg">
             <img class="group-img" src="${pathStart}assets/photos/squares/prizegiving-jazz-band.jpg">
-            <img class="group-img" src="${pathStart}assets/photos/squares/prizegiving-jazz-band.jpg">
-            <img class="group-img" src="${pathStart}assets/photos/squares/prizegiving-jazz-band.jpg">
+            <img class="group-img" src="${pathStart}assets/photos/squares/prizegiving-jazz-band.jpg">-->
         </div>
     </div>
 `;
