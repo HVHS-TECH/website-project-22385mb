@@ -178,7 +178,7 @@ groupInfoTemplate.innerHTML = `
 const staffInfoTemplate = document.createElement('template');
 staffInfoTemplate.innerHTML = `
 <style>
-    @import url(${pathStart}styles/registration.css)
+    @import url(${pathStart}styles/component-styles.css)
 </style>
     <div class="info-card">
         <p class="exit-card">&#x2715; Close</p>                    
@@ -191,7 +191,6 @@ staffInfoTemplate.innerHTML = `
         <div class="bio">
             <slot name="bio">
                 <p>A bio hasn't been supplied for this staff member.</p>
-                <p>Despite this...</p>
             </slot>
         </div>
     </div>

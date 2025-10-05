@@ -270,21 +270,17 @@ group-info-card:not(.current) {
     transform: translateX(-50%);
     z-index: 20;
 
-    display: none;
+    display: grid;
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
     width: 85%;
-    padding: 1em 0 2.5em 0;
+    padding: 1em 0.5em 2.5em 0;
 
     background-color: var(--color-dark-green);
     box-shadow: 0 0 1em 0.1em var(--color-black);
-    color: white;
+    color: var(--color-white);
     text-align: center;
-}
-
-.info-card-show {
-    display: grid;
 }
 
 .info-card .details > * {
@@ -309,7 +305,7 @@ group-info-card:not(.current) {
 
 .info-card .profilePic {
     width: 40%;
-    max-width: 135px;
+    max-width: 100px;
     border-radius: 100%;
 }
 
@@ -330,7 +326,41 @@ group-info-card:not(.current) {
     color: red;
 }
 
+@media (min-width: 600px) {
+    .info-card {
+        width: 75%;
+    }
+}
 
+@media (min-width: 767px) {
+    .staff-note {
+        margin-right: 7em;
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .info-card {
+        width: 45%;
+
+        grid-template-columns: 2fr 1fr;
+        row-gap: 5%;
+    }
+
+    .info-card .details {
+        grid-row: 1;
+    }
+
+    .info-card .profilePic {
+        grid-column-start: 2;
+        justify-self: start;
+        width: 75%;
+        max-width: 75%;
+    }
+
+    .info-card .bio {
+        font-size: 1.2rem;
+    }
+}
 
 /*****************************************/
 /*** MEDIA QUERIES ***/

@@ -325,74 +325,11 @@ group-info-card:not(.current) {
     scale: -1;
 }
 
-.info-card {
-    position: fixed;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 20;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    justify-items: center;
-    width: 85%;
-    padding: 1em 0 2.5em 0;
-
-    background-color: var(--color-dark-green);
-    box-shadow: 0 0 1em 0.1em var(--color-black);
-    color: white;
-    text-align: center;
-}
-
 .info-card-show {
     display: block;
 }
 staff-info-card {
     display: none;
-}
-
-.info-card .details > * {
-    margin: 0;
-}
-
-.details .name {
-    font-weight: 900;
-    font-size: 100%;
-    text-transform: uppercase;
-}
-
-.details .role {
-    font-weight: 700;
-}
-
-.details .contact {
-    font-weight: 300;
-    font-size: 65%;
-    font-style: italic;
-}
-
-.info-card .profilePic {
-    width: 40%;
-    max-width: 135px;
-    border-radius: 100%;
-}
-
-.info-card .bio {
-    grid-column: 1 / -1;
-    width: 80%;
-    margin: 0 auto;
-    font-size: 1rem;
-    text-align: left;
-}
-
-.info-card .exit-card {
-    position: absolute;
-    top: 0.1em;
-    right: 0.2em;
-    margin: 0;
-    font-size: 1.5rem;
-    color: red;
 }
 
 
@@ -404,39 +341,11 @@ staff-info-card {
     }
 }
 
-@media (min-width: 600px) {
-    .info-card {
-        width: 75%;
-    }
-}
-
 @media (min-width: 767px) {
     .staff-note {
         margin-right: 7em;
         width: 15vw;
         height: 15vw;
-    }
-
-    .info-card {
-        width: 45%;
-
-        grid-template-columns: 2fr 1fr;
-        row-gap: 5%;
-    }
-
-    .info-card .details {
-        grid-row: 1;
-    }
-
-    .info-card .profilePic {
-        grid-column-start: 2;
-        justify-self: start;
-        width: 75%;
-        max-width: 75%;
-    }
-
-    .info-card .bio {
-        font-size: 1.2rem;
     }
 }
 
