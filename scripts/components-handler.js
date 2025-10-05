@@ -37,7 +37,7 @@ navBarTemplate.innerHTML = `
         <a class="logo" href="${pathStart}index.html">
             <img src="${pathStart}assets/graphics/HVHS-Logo.svg" alt="Hutt Valley High School Logo" />
         </a>
-        <img class="hamburger" src="${pathStart}assets/graphics/hamburger-menu.svg" alt="">
+        <img class="hamburger" src="${pathStart}assets/graphics/hamburger-menu.svg" alt="An icon of a music stave and trbele cleff to open a dropdown menu." tabindex="0">
     </nav>
 `;
 
@@ -45,7 +45,10 @@ navBarTemplate.innerHTML = `
 const dropDownTemplate = document.createElement('template');
 dropDownTemplate.innerHTML = `
     <style>
-        @import url(${pathStart}styles/component-styles.css)
+        @import url(${pathStart}styles/component-styles.css);
+        .hidden {
+            display: none;
+        }
     </style>
 
     <div class="dropdown hidden">
@@ -181,7 +184,7 @@ staffInfoTemplate.innerHTML = `
     @import url(${pathStart}styles/component-styles.css)
 </style>
     <div class="info-card">
-        <p class="exit-card">&#x2715; Close</p>                    
+        <p class="exit-card" tabindex="0">&#x2715; Close</p>                    
         <img class="profilePic" src="" alt="A profile picture of the staff member">
         <div class="details">
             <h3 class="name">Staff Member</h3>

@@ -6,8 +6,8 @@
     <meta name="description" content="The Hutt Valley High School music department is a thriving space where anyone and everyone is welcome to join in and experience the joys of music.">
     <title>Registration Information - HVHS Music Department</title>
     <link rel="icon" type="image/x-icon" href="../assets/favicons/favicon.ico">
-
-    <script src="../scripts/components-handler.js" type="module"></script>
+    
+    <script defer src="../scripts/components-handler.js" type="module"></script>
     <link rel="stylesheet" type="text/css" href="../styles/mainStyles.css">
     <link rel="stylesheet" type="text/css" href="../styles/registration.css">
     <script defer src="../scripts/rego-info-handler.js"></script>
@@ -18,7 +18,7 @@
     
     <main>
         <div id="registration-header" class="header">
-            <img class="header-img" src="../assets/photos/headers/guitar-sheetmusic-header.jpg" alt="Sheet music rests on a stand in front of a guitar player.">
+            <img class="header-img" src="../assets/photos/headers/guitar-sheetmusic-header.jpg" alt="Sheet music rests on a stand in front of a guitar player." fetchpriority="high">
             <h1 class="title">Register</h1>
         </div>
         <div class="main-cta">
@@ -96,7 +96,7 @@
             <div class="instruments">
                 <h3>Instruments</h3>
                 <div class="instrument-slideshow">
-                    <img id="chevron-left" class="chevron" src="../assets/graphics/icons/chevron-left-rounded.svg" alt="An arrow pointing left">
+                    <img id="chevron-left" class="chevron" src="../assets/graphics/icons/chevron-left-rounded.svg" alt="An arrow pointing left" tabindex="0">
                     <div class="cards-container">
                         <div class="card current" data-card-num="1">
                             <picture class="credit-ac"><img src="../assets/photos/instruments/drums.jpg" alt="A student plays the drums"></picture>
@@ -160,7 +160,7 @@
                         </div>
                         
                     </div>
-                    <img id="chevron-right" class="chevron" src="../assets/graphics/icons/chevron-right-rounded.svg" alt="An arrow pointing right">
+                    <img id="chevron-right" class="chevron" src="../assets/graphics/icons/chevron-right-rounded.svg" alt="An arrow pointing right" tabindex="0">
                 </div>
             </div>
         </div>
