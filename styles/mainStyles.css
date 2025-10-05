@@ -124,7 +124,7 @@ body {
 .text-container {
     margin: 0 auto;
     width: 90%;
-    max-width: 500px;
+    max-width: 700px;
 }
 
 .desktop-only {
@@ -208,6 +208,7 @@ img {
 
 .poutama img {
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -217,6 +218,7 @@ img {
 
 /*** SLIDESHOW CARDS ***/
 .instruments {
+    width: 100%;
     padding-bottom: 1em;
     text-align: center;
 }
@@ -334,6 +336,7 @@ img {
 
 .groupsImg {
     display: flex;
+    justify-content: center;
     margin: 0 auto;
     width: 75%;
 }
@@ -410,8 +413,9 @@ img {
 
 .image-embellishment {
     position: absolute;
-    top: 110%; 
+    top: 110vh; 
     width: 19%;
+    max-width: 300px;
     border: 0.5em var(--color-accent-gold) solid;
 }
 
@@ -497,6 +501,13 @@ img {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
+        justify-items: center;
+    }
+    .staff-cta {
+        width: 80%;
+    }
+    .groups-cta {
+        width: 100%;
     }
 
     .main-cta {
@@ -504,7 +515,7 @@ img {
     }
 
     .groupText {
-        font-size: 1.3rem;
+        font-size: 0.8em;
     }
 
     .staffHero .note:nth-child(1) {
@@ -515,5 +526,17 @@ img {
     }
     .staffHero .note:nth-child(3) {
         bottom: 2.5rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    .title {
+        font-size: 15rem;
+    }
+}
+
+@media (min-width: 2560px) {
+    body {
+        font-size: 2.5rem;
     }
 }

@@ -43,7 +43,7 @@ a, a:visited {
 
 .dropdown {
     position: fixed;
-    top: 8.5%;
+    top: 7vh;
     right: 0;
     z-index: 101;
 
@@ -418,5 +418,26 @@ group-info-card:not(.current) {
 
     .info-card .bio {
         font-size: 1.2rem;
+    }
+}
+
+@media (min-height: 1000px) {
+    .dropdown {
+        top: 5vh;
+    }
+}
+
+@media (max-height: 600px) {
+    .dropdown {
+        top: 9.5vh;
+    }
+}
+
+@media (max-height: 400px) {
+    .dropdown {
+        top: 15vh;
+    }
+    .dropdown .poutama {
+        height: 25vh;
     }
 }

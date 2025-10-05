@@ -61,7 +61,7 @@
 }
 
 .diagonalPoutama .text {
-    font-size: 1rem;
+    font-size: 1em;
     text-align: center;
     margin: auto 0;
     grid-column-end: span 2;
@@ -152,9 +152,5 @@
     }
     .body-text > .group li + li {
         margin-top: 10%;
-    }
-
-    .diagonalPoutama .text {
-        font-size: 1.5rem;
     }
 }
