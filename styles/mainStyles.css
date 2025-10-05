@@ -1,3 +1,6 @@
+/************************/
+/*** FONTS ***/
+/************************/
 /* monoton-regular - latin */
 @font-face {
   font-display: swap;
@@ -72,7 +75,9 @@
        url('../assets/fonts/lato-v25-latin-900.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
 }
 
-
+/************************/
+/*** COLOURS ***/
+/************************/
 :root {
     /*** COLOUR VARIABLES ***/
     --color-background: #dfebf2;
@@ -94,32 +99,6 @@
     font-family: Lato;
 }
 
-img {
-    display: block;
-    max-inline-size: 100%;
-}
-.credit-ac {
-    position: relative;
-}
-.credit-ac::after, .credit-gw::after {
-    content: "© Adrian Cartwright";
-    font-size: 0.2em;
-    position: absolute;
-    bottom: 1%;
-    right: 5%;
-    z-index: 5;
-    color: var(--color-white);
-    opacity: 0.7;
-}
-.credit-gw::after {
-    content: "© Grace Wright"
-}
-
-.poutama img {
-    height: 100%;
-    object-fit: cover;
-}
-
 html, body {
     overflow-x: clip;
 }
@@ -128,9 +107,6 @@ body {
     margin: 0;
     background-color: var(--color-background);
     font-size: 1.2rem;
-}
-#index-body {
-    background: linear-gradient(180deg, var(--color-main-turq) 30%, var(--color-background) 50%);
 }
 
 .btn {
@@ -169,6 +145,102 @@ body {
     stroke-width: 4px;
     fill: none;
 }
+
+.header {
+    position: relative;
+    padding: 5em 0 6em 0;
+    text-align: center;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+#staff-header::before {
+    background-image: url(../assets/photos/headers/mrk-conducting-prizegiving-header.jpg);
+}
+#registration-header::before {
+    background-image: url(../assets/photos/headers/guitar-sheetmusic-header.jpg);
+}
+#groups-header::before {
+    background-image: url(../assets/photos/headers/volante-prizegiving-header.jpg);
+}
+#courses-header::before {
+    background-image: url(../assets/photos/headers/guitar-sheetmusic-header.jpg);
+}
+
+.header .title {
+    padding: 0.3em 0;
+    background: linear-gradient(90deg, rgba(217, 193, 98, 0) 0%, rgba(217, 193, 98, 1) 7%, rgba(217, 193, 98, 1) 93%, rgba(217, 193, 98, 0) 100%);
+
+    font-size: 3.5rem;
+    letter-spacing: 1vw;
+}
+
+/*** IMAGES ***/
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+.credit-ac {
+    position: relative;
+}
+.credit-ac::after, .credit-gw::after {
+    content: "© Adrian Cartwright";
+    font-size: 0.2em;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+    z-index: 5;
+    color: var(--color-white);
+    opacity: 0.7;
+}
+.credit-gw::after {
+    content: "© Grace Wright"
+}
+
+.poutama img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#index-body {
+    background: linear-gradient(180deg, var(--color-main-turq) 30%, var(--color-background) 50%);
+}
+
+/*** SLIDESHOW CARDS ***/
+.instruments {
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    width: 40%;
+    overflow-x: hidden;
+}
+
+.card {
+    width: 100%;
+}
+
+.card img {
+    border: 0.25rem var(--color-accent-gold) solid;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card:not(.current) {
+    display: none;
+}
+
 
 .bg-embel#main-peaks {
     top: 123%;
@@ -384,6 +456,10 @@ body {
 
     .btn {
         font-size: 1rem;
+    }
+
+    .header .title {
+        font-size: 5rem;
     }
 
     .desktop-only {

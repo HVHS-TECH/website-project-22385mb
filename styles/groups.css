@@ -4,6 +4,60 @@
     --center: 0;
 }
 
+.group-slideshow {
+    display: flex;
+    justify-content: center;
+}
+
+.group-slideshow .chevron {
+    filter: invert(1);
+    scale: 5;
+}
+
+.group-slideshow .cards-container {
+    width: 50%;
+    position: relative;
+    overflow-x: visible;
+}
+
+.group-slideshow .card.behind {
+    display: block;
+    position: absolute;
+}
+.group-slideshow .card:not(.current):not(.behind) {
+    display: block;
+    position: absolute;
+}
+
+.info-container {
+    position: relative;
+    display: flex;
+    overflow-x: hidden;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (min-width: 767px) {
+    .group-slideshow .cards-container {
+        width: 30%;
+    }
+}
+@media (min-width: 1024px) {
+    .group-slideshow .cards-container {
+        width: 20%;
+    }
+}
+
+group-info-card:not(.current) {
+    display: none;
+}
+
+.group-slideshow .card img {
+    border: 0.25rem var(--color-dark-green) solid;
+    object-fit: cover;
+}
+
 .cards-container {
     transform-style: preserve-3d;
     perspective: 1000px;

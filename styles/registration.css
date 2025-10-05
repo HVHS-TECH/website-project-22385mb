@@ -1,4 +1,4 @@
-.header {
+/* .header {
     position: relative;
     padding: 5em 0 6em 0;
     text-align: center;
@@ -34,7 +34,7 @@
 
     font-size: 3.5rem;
     letter-spacing: 1vw;
-}
+} */
 
 .bg-embel.arrow {
     width: 100%;
@@ -134,232 +134,7 @@
     text-align: center;
 }
 
-
-.group-slideshow {
-    display: flex;
-    justify-content: center;
-}
-
-.group-slideshow .chevron {
-    filter: invert(1);
-    scale: 5;
-}
-
-.group-slideshow .cards-container {
-    width: 50%;
-    position: relative;
-    overflow-x: visible;
-}
-
-.group-slideshow .card.behind {
-    display: block;
-    position: absolute;
-}
-.group-slideshow .card:not(.current):not(.behind) {
-    display: block;
-    position: absolute;
-}
-
-.info-container {
-    position: relative;
-    display: flex;
-    overflow-x: hidden;
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
 @media (min-width: 767px) {
-    .group-slideshow .cards-container {
-        width: 30%;
-    }
-}
-@media (min-width: 1024px) {
-    .group-slideshow .cards-container {
-        width: 20%;
-    }
-}
-
-group-info-card:not(.current) {
-    display: none;
-}
-
-.group-slideshow .card img {
-    border: 0.25rem var(--color-dark-green) solid;
-    object-fit: cover;
-}
-
-/****************************************/
-/*** STAFF ***/
-/****************************************/
-.staff-menu {
-    position: sticky;
-    top: 9%;
-    z-index: 15;
-
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    padding: 0 1em;
-
-    background-color: var(--color-dark-green);
-    color: white;
-    font-size: 1.2rem;
-}
-.scroll-link:hover {
-    text-decoration: underline;
-}
-
-.staff-interactive {
-    position: relative;
-    margin-bottom: 7%;
-    height: 600vh;
-}
-
-.stave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 400vw;
-    height: 100%
-}
-
-.staff-container {
-    position: sticky;
-    top: 25%;
-
-    display: flex;
-    gap: 10%;
-    padding: 17vh 10%;
-    max-height: 70vh;
-}
-.staff-container .instructions {
-    position: absolute;
-    bottom: -15%;
-    left: 40%;
-}
-
-.notes-collection::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 95%;
-    transform: translateX(-7%);
-    background-image: url("../assets/graphics/double-barline.svg");
-    background-repeat: no-repeat;
-}
-
-.collection-name {
-    position: absolute;
-    top: -10%;
-    width: 100%;
-    margin: 0;
-    text-decoration: underline;
-}
-
-.staff-note {
-    margin-right: 10em;
-    width: 50vw;
-    height: 50vw;
-
-    cursor: pointer;
-}
-.staff-note:hover {
-    scale: 1.2;
-}
-.staff-note:hover::before {
-    background-color: var(--color-dark-green);
-}
-
-.line-e {
-    transform: translateY(100%);
-}
-.line-g {
-    transform: translateY(50%);
-}
-.line-b {
-    transform: translateY(10%);
-}
-.line-d {
-    transform: translateY(-50%);
-}
-.line-f {
-    transform: translateY(-100%);
-}
-.space-f {
-    transform: translateY(100%);
-}
-.space-a {
-    transform: translateY(30%);
-}
-.space-c {
-    transform: translateY(-20%);
-}
-.space-e {
-    transform: translateY(-70%);
-}
-
-.chord {
-    display: flex;
-    flex-direction: column;
-    max-height: 100%;
-}
-.chord > .staff-note {
-    margin-bottom: -25%;
-    scale: 0.7;
-}
-.chord > .staff-note:hover {
-    scale: 0.8;
-}
-
-.note-img {
-    width: 100%;
-    clip-path: ellipse(50% 35% at 50% 50%);
-}
-
-.note-img.no-img {
-    filter: invert(1);
-    scale: 0.5;
-    clip-path: ellipse(75% 75% at 50% 50%);
-}
-
-.bar-lines {
-    position: absolute;
-    left: 3%;
-    bottom: 0;
-    scale: -1;
-}
-
-.info-card-show {
-    display: block;
-}
-staff-info-card {
-    display: none;
-}
-
-
-@media (min-width: 450px) {
-    .staff-note {
-        margin-right: 7em;
-        width: 25vw;
-        height: 25vw;
-    }
-}
-
-@media (min-width: 767px) {
-    .staff-note {
-        margin-right: 7em;
-        width: 15vw;
-        height: 15vw;
-    }
-}
-
-@media (min-width: 767px) {
-    .header .title {
-        font-size: 5rem;
-    }
-
     .bg-embel.arrow {
         height: 40%;
     }
@@ -377,14 +152,6 @@ staff-info-card {
     }
     .body-text > .group li + li {
         margin-top: 10%;
-    }
-
-
-    .group-info {
-        font-size: 1.3rem;
-    }
-    .group-info .btn {
-        font-size: 1.1rem;
     }
 
     .diagonalPoutama .text {
