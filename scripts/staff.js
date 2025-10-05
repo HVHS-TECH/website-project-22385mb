@@ -28,8 +28,8 @@ staffNotes.forEach((note) => {
 })
 // Add events for closing the staff info card
 document.querySelector(".staff-interactive").addEventListener("click", closeStaffCard , {capture: true});
-document.querySelector(".exit-card").addEventListener("click", closeStaffCard);
-document.querySelectorAll(".info-card").forEach((card) => {
+// document.querySelector(".exit-card").addEventListener("click", closeStaffCard);
+document.querySelectorAll("staff-info-card").forEach((card) => {
     card.addEventListener("mouseleave", closeStaffCard);
 });
 
@@ -89,7 +89,7 @@ function scrollToStaffSection(_section) {
 //      _staffMember - the name of the staff member which corresponds to the info card's ID
 /**********************************/
 function showStaffInfo(_staffMember) {
-    var infoCard = document.querySelector(`.info-card#${_staffMember}`);
+    var infoCard = document.querySelector(`staff-info-card#${_staffMember}`);
     infoCard.classList.add("info-card-show");
 }
 

@@ -174,6 +174,28 @@ groupInfoTemplate.innerHTML = `
         </div>
     </div>
 `;
+
+const staffInfoTemplate = document.createElement('template');
+staffInfoTemplate.innerHTML = `
+<style>
+    @import url(${pathStart}styles/registration.css)
+</style>
+    <div class="info-card">
+        <p class="exit-card">&#x2715; Close</p>                    
+        <img class="profilePic" src="" alt="A profile picture of the staff member">
+        <div class="details">
+            <h3 class="name">Staff Member</h3>
+            <p class="role">Role</p>
+            <a class="contact" href="mailto:music@hvhs.school.nz">music@hvhs.school.nz</a>
+        </div>
+        <div class="bio">
+            <slot name="bio">
+                <p>A bio hasn't been supplied for this staff member.</p>
+                <p>Despite this...</p>
+            </slot>
+        </div>
+    </div>
+`;
 /***********************************/
 // CLASSES for extending elements
 /***********************************/
@@ -244,6 +266,36 @@ class GroupInfo extends HTMLElement {
     }
 }
 
+class StaffInfo extends HTMLElement {
+    constructor() {
+        super();
+
+        const shadowRoot = this.attachShadow({ mode: 'open'});
+        let clone = staffInfoTemplate.content.cloneNode(true);
+        shadowRoot.append(clone);
+
+        this.timeAttr = ['day', 'time', 'locale'];
+    }
+
+    static get observedAttributes() {
+        return ['name', 'role', 'contact', 'profilepic'];
+    }
+
+    attributeChangedCallback(attrName, oldVal, newVal) {
+        if(attrName.toLowerCase() == 'contact') {
+            let contactBtn = this.shadowRoot.querySelector(`.contact`);
+            contactBtn.href = `mailto:${newVal}`;
+            contactBtn.innerHTML = newVal;
+        } else if (attrName.toLowerCase() == 'profilepic'){
+            let profilePicElement = this.shadowRoot.querySelector(`.profilePic`);
+            profilePicElement.src = newVal;
+        } else {
+            let element = this.shadowRoot.querySelector(`.${attrName}`);
+            element.innerHTML = newVal;
+        }
+    }
+}
+
 /***********************************/
 // DEFINE ELEMENTS
 /***********************************/
@@ -251,6 +303,7 @@ customElements.define('nav-bar', NavBar);
 customElements.define('drop-down-menu', DropDown);
 customElements.define('custom-footer', CustomFooter);
 customElements.define('group-info-card', GroupInfo);
+customElements.define('staff-info-card', StaffInfo);
 
 
 // Open and close the nav bar when the "hamburger" symbol is clicked

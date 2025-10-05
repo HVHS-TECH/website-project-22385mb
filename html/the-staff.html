@@ -30,42 +30,90 @@
             </div>
         </div>
         <div class="staff-info">
-                <div class="info-card" id="Jhan-Lindsay">
-                    <p class="exit-card">&#x2715; Close</p>                    
-                    <img class="profilePic" src="../assets/photos/staff/lindsay.jpg">
-                    <div class="details">
-                        <h3 class="name">Jhan Lindsay</h3>
-                        <p class="role">Music Coordinator</p>
-                        <p class="contact">music@hvhs.school.nz</p>
-                    </div>
-                    <p class="bio">
-                        Nam eget facilisis tristique morbi. Hendrerit purus diam magna amet purus viverra ut. 
-                        Faucibus ut consequat vel justo cursus enim interdum. Mattis pellentesque nunc semper tellus sem. 
-                        Felis purus ornare lectus vitae est. Ac at diam amet sed ac massa magna viverra nullam. 
-                        Elementum laoreet cursus felis amet facilisis sit sem fermentum. 
-                    </p>
-                </div>
-                <div class="info-card" id="Katriona-MacDonald">
-                    <p class="exit-card">&#x2715; Close</p>
-                    <img class="profilePic" src="../assets/photos/staff/macdonald.jpg">
-                    <div class="details">
-                        <h3 class="name">Katriona-MacDonald</h3>
-                        <p class="role">Music Coordinator</p>
-                        <p class="contact">katriona.macdonald@hvhs.school.nz</p>
-                    </div>
-                    <p class="bio">
-                        Nam eget facilisis tristique morbi. Hendrerit purus diam magna amet purus viverra ut. 
-                        Faucibus ut consequat vel justo cursus enim interdum. Mattis pellentesque nunc semper tellus sem. 
-                        Felis purus ornare lectus vitae est. Ac at diam amet sed ac massa magna viverra nullam. 
-                        Elementum laoreet cursus felis amet facilisis sit sem fermentum. 
-                    </p>
-                </div>
-            </div>
-        <div class="staff-menu">
+            <staff-info-card id="Jhan-Lindsay" class=""
+                name="Jhan Lindsay"
+                role="Music Coordinator"
+                contact="music@hvhs.school.nz"
+                profilePic="../assets/photos/staff/lindsay.jpg"
+            >
+                <p slot="bio">
+                    Ms Lindsay is the one of the key coordinators of the intenerent music lessons provided at HVHS.
+                    She also helps take care of organsing trips
+                </p>
+            </staff-info-card>
+            <staff-info-card id="Katriona-MacDonald" class=""
+                name="Katriona MacDonald"
+                role="Music Teacher"
+                contact="katriona.macdonald@hvhs.school.nz"
+                profilePic="../assets/photos/staff/macdonald.jpg"
+            >
+            </staff-info-card>
+            <staff-info-card id="Nicholas-Kovacev" class=""
+                name="Nicholas Kovacev"
+                role="Music Teacher"
+                contact="nicholas.kovacev@hvhs.school.nz"
+                profilePic="../assets/photos/staff/kovacev.jpg"
+            >
+            </staff-info-card>
+            <staff-info-card id="Grace-Wright" class=""
+                name="Grace Wright"
+                role="Music Teacher and Deputy Principal"
+                contact="grace.wright@hvhs.school.nz"
+                profilePic="../assets/graphics/icons/akar-icons--person.svg"
+            >
+            </staff-info-card>
+            <staff-info-card id="Ruth-Armishaw" class=""
+                name="Ruth Armishaw"
+                role="Vocal Teacher"
+                contact="ruth.armishaw@hvhs.school.nz"
+                profilePic="../assets/photos/staff/armishaw.jpg"
+            >
+            </staff-info-card>
+            <staff-info-card id="David-Brooks" class=""
+                name="David Brooks"
+                role="Vocal Teacher"
+                contact="david.brooks@hvhs.school.nz"
+                profilePic="../assets/photos/staff/brooks.jpg"
+            >
+            </staff-info-card>
+            <staff-info-card id="Chris-Buckland" class=""
+                name="Chris Buckland"
+                role="Saxophone and Clarinet Teacher"
+                contact="chris.buckland@hvhs.school.nz"
+                profilePic="../assets/graphics/icons/akar-icons--person.svg"
+            >
+            </staff-info-card>
+            <staff-info-card id="Gemma-McIlroy" class=""
+                name="Gemma McIlroy"
+                role="Flute Teacher"
+                contact="gemma.McIlroy@hvhs.school.nz"
+                profilePic="../assets/graphics/icons/akar-icons--person.svg"
+            >
+            </staff-info-card>
+            <staff-info-card id="Alex-Vaatstra" class=""
+                name="Alex Vaatstra"
+                role="Violin and Viola Teacher"
+                contact="alexander.vaatstra@hvhs.school.nz"
+                profilePic="../assets/photos/staff/vaatstra.jpg"
+            >
+            </staff-info-card>
+            <staff-info-card id="Leigh-Jackson" class=""
+                name="Leigh Jackson"
+                role="Guitar and Bass Teacher"
+                contact="leigh.jackson@hvhs.school.nz"
+                profilePic="../assets/graphics/icons/akar-icons--person.svg"
+            >
+            </staff-info-card>
+
+
+        <!-- <div class="staff-menu">
             <p>Staff Sections:</p>
             <p class="scroll-link">Teachers</p>
-            <p class="scroll-link">Tutors</p>
-        </div>
+            <p class="scroll-link">Voice</p>
+            <p class="scroll-link">Wind</p>
+            <p class="scroll-link">Strings</p>
+            <p class="scroll-link">Guitars</p>
+        </div> -->
         <div class="staff-interactive">
             <div class="staff-container">
                 <!-- Background Stave SVG -->
@@ -89,7 +137,7 @@
                 <div id="Teachers" class="notes-collection">
                     <h2 class="collection-name">Teachers</h2>
                     <div class="note staff-note space-a" data-staff-member="Jhan-Lindsay">
-                        <img class="note-img" src="../assets/photos/staff/lindsay.jpg"/>
+                        <img class="note-img" src="../assets/photos/staff/lindsay.jpg">
                     </div>
                     <div class="note staff-note space-c" data-staff-member="Katriona-MacDonald">
                         <img class="note-img" src="../assets/photos/staff/macdonald.jpg"
@@ -97,37 +145,47 @@
                     </div>
                     <div class="note staff-note space-e" data-staff-member="Nicholas-Kovacev">
                         <img class="note-img" src="../assets/photos/staff/kovacev.jpg"
-                                preserveAspectRatio="xMidYMid slice"/>
+                                preserveAspectRatio="xMidYMid slice">
                     </div>
                     <div class="note staff-note line-g" data-staff-member="Grace-Wright">
-                        <img class="note-img" src="../assets/photos/staff/kovacev.jpg"
-                                preserveAspectRatio="xMidYMid slice"/>
+                        <img class="note-img no-img" src="../assets/graphics/icons/akar-icons--person.svg"
+                                preserveAspectRatio="xMidYMid slice">
                     </div>
                 </div>
-                <div id="Tutors" class="notes-collection">
-                    <h2 class="collection-name">Tutors</h2>
-                    <div class="chord space-c">
-                        <div class="note staff-note">
-                            <img class="note-img" src="../assets/photos/squares/woburn-apt-strings.jpg"/>
-                        </div>
-                        <div class="note staff-note">
-                            <img class="note-img" src="../assets/photos/squares/woburn-apt-strings.jpg"
-                                    preserveAspectRatio="xMidYMid slice"/>
-                        </div>
-                        <div class="note staff-note">
-                            <img class="note-img" src="../assets/photos/squares/woburn-apt-strings.jpg"
-                                    preserveAspectRatio="xMidYMid slice"/>
-                        </div>
+                <div id="Voice" class="notes-collection">
+                    <h2 class="collection-name">Voice</h2>
+                    <div class="note staff-note space-c" data-staff-member="Ruth-Armishaw">
+                        <img class="note-img" src="../assets/photos/staff/armishaw.jpg">
                     </div>
-                    <div class="note staff-note">
-                        <img class="note-img" src="../assets/photos/squares/woburn-apt-strings.jpg"
-                                preserveAspectRatio="xMidYMid slice"/>
-                    </div>
-                    <div class="note staff-note">
-                        <img class="note-img" src="../assets/photos/squares/woburn-apt-strings.jpg"
-                                preserveAspectRatio="xMidYMid slice"/>
+                    <div class="note staff-note line-g" data-staff-member="David-Brooks">
+                        <img class="note-img" src="../assets/photos/staff/brooks.jpg"
+                                preserveAspectRatio="xMidYMid slice">
                     </div>
                 </div>
+                <div id="Wind" class="notes-collection">   
+                    <h2 class="collection-name">Wind Instruments</h2>
+                    <div class="note staff-note line-e" data-staff-member="Chris-Buckland">
+                        <img class="note-img no-img" src="../assets/graphics/icons/akar-icons--person.svg">
+                    </div>
+                    <div class="note staff-note space-c" data-staff-member="Gemma-McIlroy">
+                        <img class="note-img no-img" src="../assets/graphics/icons/akar-icons--person.svg"
+                                preserveAspectRatio="xMidYMid slice">
+                    </div>
+                </div>
+                <div id="Strings" class="notes-collection">
+                    <h2 class="collection-name">Strings</h2>
+                    <div class="note staff-note" data-staff-member="Alex-Vaatstra">
+                        <img class="note-img" src="../assets/photos/staff/vaatstra.jpg"
+                                preserveAspectRatio="xMidYMid slice">
+                    </div>
+                </div>
+                <dive id="Guitars" class="notes-collection">
+                    <h2 class="collection-name">Guitars</h2>
+                    <div class="note staff-note line-g" data-staff-member="Leigh-Jackson">
+                        <img class="note-img no-img" src="../assets/graphics/icons/akar-icons--person.svg"
+                                preserveAspectRatio="xMidYMid slice">
+                    </div>
+                </dive>
             </div>
         </div> 
     </main>
