@@ -1,3 +1,9 @@
+/******************************************/
+// rego-info-handler.js
+// Code for the registration page
+// Handles the sldieshow
+/******************************************/
+
 //creating an interval for an automatic slideshow change
 var slideInterval = setInterval(changeCard, 5000, "right", true);
 

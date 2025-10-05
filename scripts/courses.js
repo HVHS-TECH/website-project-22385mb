@@ -1,3 +1,9 @@
+/******************************************/
+// course.js
+// Code for the course page
+// Handles the collapsables as well as switching between mobile and laptop table views
+/******************************************/
+
 // Mobile Links menu code
 document.querySelector('.menu').addEventListener("click", () => {
     let menu = document.querySelector(".course-links");
@@ -14,17 +20,24 @@ document.querySelectorAll(".course-links a").forEach((link) => {
     })
 });
 
+// Get all the collapsable elements
 const collapsables = document.querySelectorAll(".collapse");
 collapsables.forEach((collapsable) => {
     collapsable.querySelector(".btn").addEventListener("click", expandSection);
 })
-
+// If media query is met then change to the mobile table
 var mobileMediaQuery = window.matchMedia("(max-width: 600px");
 mobileMediaQuery.addEventListener("change", () => {
     checkForScreenSize(mobileMediaQuery);
 })
 checkForScreenSize(mobileMediaQuery);
 
+/**********************************/
+// expandSection(event)
+// Collapses or uncollapses the element
+// INPUT
+//      event - comes from the listener
+/**********************************/
 function expandSection(event) {
     let collapsable = event.currentTarget.parentNode;
     let table = collapsable.children[1];
@@ -35,6 +48,12 @@ function expandSection(event) {
     }
 }
 
+/**********************************/
+// checkForScreenSize(_mediaQuery)
+// Checks if the device is mobile or desktop
+// INPUT
+//      mediaQuery - the media query element 
+/**********************************/
 function checkForScreenSize(_mediaQuery) {
     if(_mediaQuery.matches) {
         getTables("mobile");
@@ -43,6 +62,12 @@ function checkForScreenSize(_mediaQuery) {
     }
 }
 
+/**********************************/
+// getTables
+// gets all the tables
+// INPUT
+//      
+/**********************************/
 function getTables(_form) {
     let tables = document.querySelectorAll(".assessments");
     if(_form == "mobile") {
@@ -52,6 +77,12 @@ function getTables(_form) {
     }
 }
 
+/**********************************/
+// expandSection(event)
+// Creates mobile tables
+// INPUT
+//      _table - a table element
+/**********************************/
 function createMobileTable(_table) {
     let rows = _table.children[0].children;
     // Create overarching div
@@ -83,6 +114,12 @@ function createMobileTable(_table) {
     _table.remove();
 }
 
+/**********************************/
+// createTable(_table)
+// Recreates desktop tables
+// INPUT
+//      
+/**********************************/
 function createTable(_table) {
     if(_table.tagName != "TABLE") {
         let sections = _table.children;

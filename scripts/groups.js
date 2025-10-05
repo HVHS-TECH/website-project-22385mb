@@ -1,3 +1,9 @@
+/******************************************/
+// groups.js
+// Code for the groups page 
+// handles the slideshow movement and the info cards changing
+/******************************************/
+
 // Get key page elements
 const chevrons = document.querySelectorAll(".chevron");
 const totalCardsNum = Number(document.querySelectorAll(".cards-container > .card").length);
