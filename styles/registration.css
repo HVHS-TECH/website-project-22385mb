@@ -142,6 +142,7 @@
 
 .group-slideshow .chevron {
     filter: invert(1);
+    scale: 5;
 }
 
 .group-slideshow .cards-container {
@@ -231,6 +232,11 @@ group-info-card:not(.current) {
     gap: 10%;
     padding: 17vh 10%;
     max-height: 70vh;
+}
+.staff-container .instructions {
+    position: absolute;
+    bottom: -15%;
+    left: 40%;
 }
 
 .notes-collection::before {

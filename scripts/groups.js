@@ -28,35 +28,36 @@ function changeCard(_direction) {
 
     // Get the nexCard, and the card behind it as well as the opposite direction to what was clicked
     if(_direction == "left") {
-        nextCardNum = checkForSlideEnd(currentCardNum + 1);
-        hiddenCardNum = checkForSlideEnd(nextCardNum + 1);
-        oppDirection = "right";
-    } else if(_direction == "right"){
         nextCardNum = checkForSlideEnd(currentCardNum - 1);
         hiddenCardNum = checkForSlideEnd(nextCardNum - 1);
+        oppDirection = "right";
+    } else if(_direction == "right"){
+        nextCardNum = checkForSlideEnd(currentCardNum + 1);
+        hiddenCardNum = checkForSlideEnd(nextCardNum + 1);
         oppDirection = "left";
     }
+    
     // Get the HTML elements of each card(next card, card behind it, the card which the current is replacing)
     var nextCard = document.querySelector(`.card[data-card-num="${nextCardNum}"]`);
     var hiddenCard = document.querySelector(`.card[data-card-num="${hiddenCardNum}"]`);
-    var lastCard = document.querySelector(`.card.behind.${_direction}`);
+    var lastCard = document.querySelector(`.card.behind.${oppDirection}`);
 
     // MOVE ALL THE CARDS BY CHANGING THIER CLASSES
     //Move the card on the "end" by making it invisible
-    lastCard.classList.remove(_direction, "behind");
+    lastCard.classList.remove(oppDirection, "behind");
     //Make the previous current card move behind in the right direction
     currentCard.classList.remove("current");
-    currentCard.classList.add("behind", _direction);
+    currentCard.classList.add("behind", oppDirection);
     //Get the cards for the next and the hidden card then add the necessary classes to "move them"
     nextCard.classList.remove("behind", "left", "right");
     nextCard.classList.add("current");
-    hiddenCard.classList.add("behind", oppDirection);
+    hiddenCard.classList.add("behind", _direction);
 
     // ADD THE ANIMATION CLASSES
-    manageAnimClasses(lastCard, `${_direction}-hidden`);
-    manageAnimClasses(currentCard, `center-${_direction}`);
-    manageAnimClasses(nextCard, `${oppDirection}-center`);
-    manageAnimClasses(hiddenCard, `hidden-${oppDirection}`);
+    manageAnimClasses(lastCard, `${oppDirection}-hidden`);
+    manageAnimClasses(currentCard, `center-${oppDirection}`);
+    manageAnimClasses(nextCard, `${_direction}-center`);
+    manageAnimClasses(hiddenCard, `hidden-${_direction}`);
 
     changeInfoCard(nextCardNum, currentCardNum);
 }
